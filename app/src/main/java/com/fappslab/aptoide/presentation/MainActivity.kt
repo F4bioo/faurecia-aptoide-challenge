@@ -1,7 +1,8 @@
-package com.fappslab.aptoide
+package com.fappslab.aptoide.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.fappslab.aptoide.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
