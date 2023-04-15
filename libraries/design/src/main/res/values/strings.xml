@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_error_title">Something went wrong!</string>
+    <string name="common_error">Error</string>
+    <string name="common_try_again">Oops! Try again</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="common_await">Wait…</string>
+    <string name="common_close">Close</string>
+    <string name="common_back">Return</string>
+    <string name="common_client_error">Please check the internet connection and try again.</string>
+    <string name="common_server_error">Something went wrong on our end. Please try again later.</string>
+    <string name="common_unknown_error">There was an error processing your request. Please try again.</string>
+    <string name="common_filter_error">No results. Please adjust your filters and try again.</string>
+</resources>
