@@ -1,4 +1,7 @@
 <resources>
     <string name="home_about">About</string>
     <string name="home_logo_description">Aptoide logo</string>
+    <string name="home_editors_title">Editor\'s choice</string>
+    <string name="home_tops_title">Top downloads</string>
+    <string name="home_trending_title">Trending</string>
 </resources>
