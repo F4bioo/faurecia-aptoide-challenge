@@ -22,9 +22,10 @@ object TestLibs {
     const val kotlinTest = "org.jetbrains.kotlin:kotlin-test:${Versions.kotlin_version}"
     const val kotlinJUnitTest = "org.jetbrains.kotlin:kotlin-test-junit:${Versions.kotlin_version}"
     const val kotlinCoroutinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutines_version }"
+    const val coroutinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:${Versions.coroutines_version}"
 
     // Others
     const val junitTest = "junit:junit:${Versions.junit_version}"
-   const val arcCoreTest = "androidx.arch.core:core-testing:${Versions.coreTest_version}"
+    const val arcCoreTest = "androidx.arch.core:core-testing:${Versions.coreTest_version}"
     const val turbineTest = "app.cash.turbine:turbine:${Versions.turbine_version}"
 }
