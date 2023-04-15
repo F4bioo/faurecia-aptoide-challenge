@@ -1,5 +1,11 @@
 import static Versions.detekt_version
 
+buildscript {
+    dependencies {
+        classpath(Root.classPathJaCoCo)
+    }
+}
+
 plugins {
     id 'com.android.application' version '7.4.0' apply false
     id 'com.android.library' version '7.4.0' apply false

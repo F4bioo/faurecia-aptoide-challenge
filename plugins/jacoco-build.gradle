@@ -1,0 +1,107 @@
+// Aplica o plugin JaCoCo
+apply plugin: 'jacoco'
+
+// Ativa o rastreamento de cobertura de teste para o modo de depuração
+android {
+    buildTypes {
+        debug {
+            testCoverageEnabled true
+        }
+    }
+}
+
+// Configura o relatório Android após avaliar o projeto
+project.afterEvaluate { project ->
+    setupAndroidReporting()
+}
+
+def setupAndroidReporting() {
+    // Exclui as classes sem localização de fonte e as classes internas do JDK
+    tasks.withType(Test) {
+        jacoco.includeNoLocationClasses = true
+        jacoco.excludes = ['jdk.internal.*']
+    }
+
+    // Obtém os tipos de build e os flavors de produto
+    def buildTypes = android.buildTypes.collect { type -> type.name }
+    def productFlavors = android.productFlavors.collect { flavor -> flavor.name }
+
+    // Se não houver flavors de produto, usa o vazio
+    if (!productFlavors) productFlavors.add('')
+
+    // Para cada sabor de produto e tipo de build, cria uma tarefa de relatório de cobertura de teste
+    productFlavors.each { productFlavorName ->
+        buildTypes.each { buildTypeName ->
+            def sourceName, sourcePath
+            if (!productFlavorName) {
+                sourceName = sourcePath = "${buildTypeName}"
+            } else {
+                sourceName = "${productFlavorName}${buildTypeName.capitalize()}"
+                sourcePath = "${productFlavorName}/${buildTypeName}"
+            }
+            def testTaskName = "test${sourceName.capitalize()}UnitTest"
+            System.out.println("Task -> $testTaskName")
+
+            // Cria a tarefa de relatório de cobertura de teste com base na tarefa de teste
+            task "${testTaskName}Coverage"(type: JacocoReport, dependsOn: "$testTaskName") {
+                group = "Reporting"
+                description = "Gera relatórios de cobertura JaCoCo para o build ${sourceName.capitalize()}."
+
+                // Filtra os arquivos para excluir da cobertura de teste
+                def fileFilter = [
+                        // data binding
+                        'android/databinding/**/*.class',
+                        '**/android/databinding/*Binding.class',
+                        '**/android/databinding/*',
+                        '**/androidx/databinding/*',
+                        '**/BR.*',
+                        // android
+                        '**/R.class',
+                        '**/R$*.class',
+                        '**/BuildConfig.*',
+                        '**/Manifest*.*',
+                        '**/*Test*.*',
+                        'android/**/*.*',
+                        // kotlin
+                        '**/*MapperImpl*.*',
+                        '**/*$ViewInjector*.*',
+                        '**/*$ViewBinder*.*',
+                        '**/BuildConfig.*',
+                        '**/*Component*.*',
+                        '**/*BR*.*',
+                        '**/Manifest*.*',
+                        '**/*$Lambda$*.*',
+                        '**/*Companion*.*',
+                        '**/*Module*.*',
+                        '**/*Dagger*.*',
+                        '**/*Hilt*.*',
+                        '**/*MembersInjector*.*',
+                        '**/*_MembersInjector.class',
+                        '**/*_Factory*.*',
+                        '**/*_Provide*Factory*.*',
+                        '**/*Extensions*.*',
+                        // sealed e data classes
+                        '**/*$Result.*',
+                        '**/*$Result$*.*',
+                        // adapters gerados pelo moshi
+                        '**/*JsonAdapter.*',
+                ]
+
+                // Obtém os arquivos de classe gerados pelo Java e Kotlin
+                def javaTree = fileTree(dir: "${project.buildDir}/intermediates/javac/$sourceName/classes", excludes: fileFilter)
+                def kotlinTree = fileTree(dir: "${project.buildDir}/tmp/kotlin-classes/$sourceName", excludes: fileFilter)
+                classDirectories.from = files([javaTree], [kotlinTree])
+
+                // Obtém os dados de execução da tarefa de teste
+                executionData.from = files("${project.buildDir}/jacoco/${testTaskName}.exec")
+
+                // Obtém os diretórios de código-fonte para a cobertura de teste
+                def coverageSourceDirs = ["src/main/java",
+                                          "src/$productFlavorName/java",
+                                          "src/$buildTypeName/java"]
+                sourceDirectories.setFrom(files(coverageSourceDirs))
+                additionalSourceDirs.setFrom(files(coverageSourceDirs))
+            }
+        }
+    }
+}
