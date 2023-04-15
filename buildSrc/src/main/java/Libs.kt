@@ -13,6 +13,7 @@ object Libs {
     // Kotlin
     const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines_version}"
     const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines_version}"
+    const val coroutinesRx2 = "org.jetbrains.kotlinx:kotlinx-coroutines-rx2:${Versions.coroutines_version}"
 
     // Koin
     const val koinCore = "io.insert-koin:koin-core:${Versions.koin_version}"
@@ -25,6 +26,7 @@ object Libs {
     const val okhttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp_version}"
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit_version}"
     const val retrofitConverterGson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit_version}"
+    const val retrofitRxJava2Adapter = "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofit_version}"
 
     // Gson
     const val gson = "com.google.code.gson:gson:${Versions.gson_version}"

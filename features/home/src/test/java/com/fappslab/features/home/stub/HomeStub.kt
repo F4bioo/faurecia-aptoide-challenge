@@ -1,4 +1,4 @@
-package com.fappslab.features.home.domain.stub
+package com.fappslab.features.home.stub
 
 import com.fappslab.features.home.domain.model.App
 import com.fappslab.features.home.domain.model.Apps
