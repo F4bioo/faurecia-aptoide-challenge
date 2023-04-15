@@ -1,0 +1,26 @@
+import static Versions.detekt_version
+
+apply plugin: "io.gitlab.arturbosch.detekt"
+
+project.afterEvaluate {
+    tasks.named("preBuild") {
+        dependsOn("detekt")
+    }
+}
+
+detekt {
+    toolVersion = "$detekt_version"
+    def inputDirFiles = []
+    rootProject.subprojects.each { module ->
+        inputDirFiles << "$module.projectDir/src/androidTest/java"
+        inputDirFiles << "$module.projectDir/src/main/java"
+        inputDirFiles << "$module.projectDir/src/test/java"
+    }
+    source = files(inputDirFiles)
+    config = files("$rootDir/config/detekt/detekt.yml")
+    autoCorrect = true
+}
+
+dependencies {
+    detektPlugins "io.gitlab.arturbosch.detekt:detekt-formatting:$detekt_version"
+}
