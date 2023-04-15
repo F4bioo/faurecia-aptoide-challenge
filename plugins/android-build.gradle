@@ -1,0 +1,67 @@
+apply plugin: 'kotlin-parcelize'
+
+apply from: "$rootDir/plugins/config-build.gradle"
+apply from: "$rootDir/plugins/test-build.gradle"
+
+android {
+    defaultConfig {
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "$rootDir/app/proguard-rules.pro"
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+        }
+        preprod {
+            initWith debug
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                    "$rootDir/app/proguard-rules.pro",
+                    "$rootDir/app/proguard-rules-staging.pro"
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                    "$rootDir/app/proguard-rules.pro",
+                    "$rootDir/app/proguard-rules-staging.pro"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        disable 'MissingTranslation', 'ExtraTranslation'
+        abortOnError false
+        xmlReport true
+    }
+    packagingOptions {
+        resources.excludes += "DebugProbesKt.bin"
+    }
+}
+
+dependencies {
+    // Libs
+    implementation(Libs.coreKtx)
+    implementation(Libs.appcompat)
+    implementation(Libs.material)
+    implementation(Libs.constraintLayout)
+    implementation(Libs.koinScope)
+    implementation(Libs.koinViewModel)
+    implementation(Libs.lifecycleViewModel)
+    implementation(Libs.lifecycleRuntime)
+    implementation(Libs.fragment)
+    implementation(Libs.fragmentKtx)
+    implementation(Libs.coroutines)
+    implementation(Libs.coroutinesCore)
+    implementation(Libs.coil)
+    implementation(Libs.lottie)
+}
