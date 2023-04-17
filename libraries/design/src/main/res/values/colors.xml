@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="ds_primary">#EA1D2C</color>
+    <color name="ds_primary">#F84F1A</color>
     <color name="ds_primary_dark">@color/ds_primary</color>
     <color name="ds_accent">#6200EE</color>
     <color name="ds_ripple">#000000</color>
@@ -12,4 +12,5 @@
     <color name="ds_on_secondary">#FFFFFF</color>
 
     <color name="ds_bg_ds_modal_host">#FFFFFFFF</color>
+    <color name="ds_highlight_medium">#1BFF9800</color>
 </resources>
