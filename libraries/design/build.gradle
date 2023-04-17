@@ -5,13 +5,10 @@ plugins {
 apply from: "$rootDir/plugins/android-build.gradle"
 
 android {
-    namespace "${Config.applicationId}.features.home"
-    resourcePrefix "home"
+    namespace "${Config.applicationId}.libraries.design"
 }
 
 dependencies {
-    // Libs
-
     // Modules
-    implementation project(Modules.design)
+
 }

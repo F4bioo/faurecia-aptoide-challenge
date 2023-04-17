@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="Theme.Ds" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/ds_primary</item>
+        <item name="colorPrimaryVariant">@color/ds_primary_dark</item>
+        <item name="colorOnPrimary">@color/ds_on_primary</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/ds_secondary</item>
+        <item name="colorSecondaryVariant">@color/ds_secondary_variant</item>
+        <item name="colorOnSecondary">@color/ds_on_secondary</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.Ds.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="DsTextLarge" parent="TextAppearance.AppCompat.Large" />
+
+    <style name="DsTextMedium" parent="TextAppearance.AppCompat.Medium" />
+
+    <style name="DsTextSmall" parent="TextAppearance.AppCompat.Small" />
+
+    <style name="DsTextMin" parent="android:TextAppearance">
+        <item name="android:textSize">@dimen/ds_text_size_01</item>
+    </style>
+
+    <style name="DsTextHighlightLarge" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DsTextHighlightMedium" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DsTextHighlightSmall" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DsTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+        <item name="android:textColor">#333</item>
+        <item name="colorPrimary">#5F5F5F</item>
+        <item name="boxBackgroundColor">@color/ds_input_layout</item>
+        <item name="boxStrokeErrorColor">#E91E63</item>
+        <item name="boxStrokeColor">#5F5F5F</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+    </style>
+
+    <style name="DsBottomSheet" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="bottomSheetStyle">@style/BottomSheetTopRadius</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="BottomSheetTopRadius" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/ds_bg_bottom_sheet_top_radius</item>
+    </style>
+
+    <style name="DsImageCircle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="ds_size_none">0dp</dimen>
+    <dimen name="ds_size_01">4dp</dimen>
+    <dimen name="ds_size_02">8dp</dimen>
+    <dimen name="ds_size_03">12dp</dimen>
+    <dimen name="ds_size_04">16dp</dimen>
+    <dimen name="ds_size_05">20dp</dimen>
+    <dimen name="ds_size_06">24dp</dimen>
+    <dimen name="ds_size_07">32dp</dimen>
+    <dimen name="ds_size_08">40dp</dimen>
+    <dimen name="ds_size_09">48dp</dimen>
+    <dimen name="ds_size_10">56dp</dimen>
+    <dimen name="ds_size_11">64dp</dimen>
+    <dimen name="ds_size_12">72dp</dimen>
+    <dimen name="ds_size_13">80dp</dimen>
+    <dimen name="ds_size_14">88dp</dimen>
+    <dimen name="ds_size_15">96dp</dimen>
+    <dimen name="ds_size_16">104dp</dimen>
+    <dimen name="ds_size_17">112dp</dimen>
+    <dimen name="ds_size_18">120dp</dimen>
+    <dimen name="ds_size_19">128dp</dimen>
+    <dimen name="ds_size_20">136dp</dimen>
+    <dimen name="ds_size_21">144dp</dimen>
+    <dimen name="ds_size_22">152dp</dimen>
+
+    <dimen name="ds_text_size_01">12sp</dimen>
+    <dimen name="ds_text_size_02">16sp</dimen>
+    <dimen name="ds_text_size_03">18sp</dimen>
+    <dimen name="ds_text_size_04">24sp</dimen>
+    <dimen name="ds_text_size_05">32sp</dimen>
+    <dimen name="ds_text_size_15">96sp</dimen>
+
+    <dimen name="ds_radius_la">32dp</dimen>
+    <dimen name="ds_radius_md">24dp</dimen>
+    <dimen name="ds_radius_sm">16dp</dimen>
+    <dimen name="ds_radius_mi">8dp</dimen>
+    <dimen name="ds_radius_ti">4dp</dimen>
+
+</resources>
