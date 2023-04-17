@@ -59,7 +59,7 @@ internal fun HomeFragment.onMenuItem(
     selectedBlock: (Int) -> Unit
 ) {
 
-    (activity as AppCompatActivity).run {
+    (activity as? AppCompatActivity)?.run {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
