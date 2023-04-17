@@ -7,9 +7,12 @@ import com.fappslab.features.home.domain.model.Apps
 import com.fappslab.features.home.domain.usecase.GetAppsUseCase
 import com.fappslab.libraries.arch.extension.applyIoToUiSchedulers
 import com.fappslab.libraries.arch.viewmodel.ViewModel
+import io.reactivex.Scheduler
+import io.reactivex.android.schedulers.AndroidSchedulers
 
 internal class HomeViewModel(
-    private val getAppsUseCase: GetAppsUseCase
+    private val getAppsUseCase: GetAppsUseCase,
+    private val scheduler: Scheduler = AndroidSchedulers.mainThread()
 ) : ViewModel<HomeViewState, HomeViewAction>(HomeViewState()) {
 
     init {
@@ -18,7 +21,7 @@ internal class HomeViewModel(
 
     private fun getApps() {
         getAppsUseCase()
-            .applyIoToUiSchedulers()
+            .applyIoToUiSchedulers(scheduler)
             .doOnSubscribe { onState { it.copy(shouldShowRefreshing = true) } }
             .doAfterTerminate { onState { it.copy(shouldShowRefreshing = false) } }
             .subscribe(::getAppsSuccess, ::getAppsFailure)

@@ -1,21 +1,10 @@
 package com.fappslab.features.home.stub
 
-import com.fappslab.features.home.domain.model.App
-import com.fappslab.features.home.domain.model.Apps
+import com.fappslab.features.home.data.mapper.toApps
+import com.fappslab.features.home.data.model.AppsResponse
+import com.fappslab.features.home.data.repository.GET_APPS_SUCCESS_RESPONSE
+import com.fappslab.libraries.arch.jsonhandle.readFromJSONToModel
 
-internal fun appsStub() =
-    Apps(
-        list = listOf(appStub(), appStub())
-    )
+internal fun appsStub() = readFromJSONToModel<AppsResponse>(GET_APPS_SUCCESS_RESPONSE).toApps()
 
-internal fun appStub() =
-    App(
-        id = 64198900,
-        storeName = "mesigior",
-        name = "Chrome Canary (Unstable)",
-        packageName = "com.chrome.canary",
-        versionCode = 555500020,
-        downloads = 34560,
-        graphic = "https://pool.img.aptoide.com/mesigior/6061351271bc49a24471b3a791a14343_fgraphic.png",
-        icon = "https://pool.img.aptoide.com/mesigior/cea3b2901a0fa9c61e766fd724cc5d5d_icon.png"
-    )
+internal fun appStub() = appsStub().list.first()

@@ -6,7 +6,8 @@ import com.fappslab.features.home.domain.model.Apps
 import com.fappslab.features.home.domain.usecase.GetAppsUseCase
 import com.fappslab.features.home.stub.appStub
 import com.fappslab.features.home.stub.appsStub
-import com.fappslab.libraries.arch.testing.rules.ViewModelTestRule
+import com.fappslab.libraries.arch.testing.rules.DispatcherTestRule
+import com.fappslab.libraries.arch.testing.rules.SchedulerTestRule
 import io.mockk.clearAllMocks
 import io.mockk.every
 import io.mockk.mockk
@@ -23,7 +24,10 @@ import kotlin.test.assertEquals
 internal class HomeViewModelTest {
 
     @get:Rule
-    val viewModelRule = ViewModelTestRule()
+    val schedulerRule = SchedulerTestRule()
+
+    @get:Rule
+    val dispatcherRule = DispatcherTestRule()
 
     private val initialState = HomeViewState()
     private val getAppsUseCase: GetAppsUseCase = mockk()
@@ -281,7 +285,8 @@ internal class HomeViewModelTest {
     private fun setupSubject(everyBlock: () -> Single<Apps> = { Single.error(Throwable()) }) {
         every { getAppsUseCase() } returns everyBlock()
         subject = HomeViewModel(
-            getAppsUseCase = getAppsUseCase
+            getAppsUseCase = getAppsUseCase,
+            scheduler = schedulerRule.testScheduler
         )
     }
 }
