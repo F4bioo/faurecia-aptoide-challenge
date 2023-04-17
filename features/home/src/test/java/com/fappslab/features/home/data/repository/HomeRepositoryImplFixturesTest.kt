@@ -1,7 +1,7 @@
 package com.fappslab.features.home.data.repository
 
 import com.fappslab.libraries.arch.jsonhandle.readFromJSONToString
-import com.fappslab.libraries.arch.rules.RemoteTestRule
+import com.fappslab.libraries.arch.testing.rules.RemoteTestRule
 import java.net.HttpURLConnection
 import javax.net.ssl.HttpsURLConnection
 

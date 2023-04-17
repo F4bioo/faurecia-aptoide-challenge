@@ -4,4 +4,6 @@
     <string name="home_editors_title">Editor\'s choice</string>
     <string name="home_tops_title">Top downloads</string>
     <string name="home_trending_title">Trending</string>
+    <string name="home_about_title">Faurecia-Aptoide Technical Challenge</string>
+    <string name="home_about_Message">The goal of this Challenge is to create a simple Android app that downloads a list of applications from Aptoide in JSON format, and list the content.</string>
 </resources>

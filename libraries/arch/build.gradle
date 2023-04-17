@@ -8,7 +8,7 @@ android {
     namespace "${Config.applicationId}.libraries.arch"
 
     defaultConfig {
-        buildConfigField "String", "BASE_URL", '"http://ws2.aptoide.com/"'
+        buildConfigField "String", "BASE_URL", '"https://ws2.aptoide.com/"'
     }
 }
 

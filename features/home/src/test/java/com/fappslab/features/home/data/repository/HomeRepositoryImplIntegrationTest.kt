@@ -4,7 +4,7 @@ import com.fappslab.features.home.data.mapper.toApps
 import com.fappslab.features.home.data.model.AppsResponse
 import com.fappslab.features.home.data.source.HomeDataSourceImpl
 import com.fappslab.libraries.arch.jsonhandle.readFromJSONToModel
-import com.fappslab.libraries.arch.rules.RemoteTestRule
+import com.fappslab.libraries.arch.testing.rules.RemoteTestRule
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.rx2.await
 import kotlinx.coroutines.rx2.rxSingle

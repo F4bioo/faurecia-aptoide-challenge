@@ -9,8 +9,9 @@
     <color name="ds_on_primary">#000000</color>
     <color name="ds_secondary">#03DAC6</color>
     <color name="ds_secondary_variant">#3700B3</color>
-    <color name="ds_on_secondary">#FFFFFF</color>
+    <color name="ds_on_secondary">#7FF84F1A</color>
 
+    <color name="ds_white">#FFFFFF</color>
     <color name="ds_bg_ds_modal_host">#FFFFFFFF</color>
     <color name="ds_highlight_medium">#1BFF9800</color>
 </resources>

@@ -2,7 +2,6 @@ package com.fappslab.libraries.arch.viewmodel
 
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
-import androidx.lifecycle.ViewModel as AndroidxViewModel
 
 /**
  * Classe abstrata que fornece suporte para descarte automático de [Disposable]s em um ViewModel.
@@ -19,11 +18,12 @@ abstract class DisposableViewModel : androidx.lifecycle.ViewModel() {
      *
      * @return o [Disposable] atual.
      */
-    protected fun Disposable.handleDisposable(): Disposable =
+    protected fun Disposable.disposableHandler(): Disposable =
         apply { disposable.add(this) }
 
     /**
-     * Chamado quando o ViewModel é limpo. Descarta todos os [Disposable]s registrados e chama o método [onCleared] do ViewModel pai.
+     * Chamado quando o ViewModel é limpo. Descarta todos os [Disposable]s registrados
+     * e chama o método [onCleared] do ViewModel pai.
      */
     override fun onCleared() {
         disposable.dispose()

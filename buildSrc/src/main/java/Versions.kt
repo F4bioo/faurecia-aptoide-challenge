@@ -12,12 +12,15 @@ object Versions {
     const val retrofit_version = "2.9.0"
     const val coroutines_version = "1.6.4"
     const val annotation_version = "1.4.0"
-    const val coil_version = "2.2.2"
+    const val glide_version = "4.13.2"
+    const val glide_transformation_version = "4.3.0"
     const val lottie_version = "5.2.0"
     const val rxjava_version = "2.2.17"
     const val rxAndroid_version = "2.1.1"
     const val detekt_version = "1.22.0"
     const val jacoco_version = "0.8.6"
+    const val swipeRefresh_version = "1.1.0"
+    const val timber_version = "4.7.1"
 
     // Tests Libs versions
     const val junit_version = "4.13.2"

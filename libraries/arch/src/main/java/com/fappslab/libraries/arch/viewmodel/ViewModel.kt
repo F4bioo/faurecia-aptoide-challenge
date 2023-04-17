@@ -19,11 +19,11 @@ abstract class ViewModel<S, A>(
     val action = _action.asSharedFlow()
 
     @Suppress("unused")
-    protected fun DisposableViewModel.onState(stateBlock: (S) -> S) {
+    protected fun onState(stateBlock: (S) -> S) {
         _state.update { stateBlock(it) }
     }
 
-    protected fun DisposableViewModel.onAction(actionBlock: () -> A) {
+    protected fun onAction(actionBlock: () -> A) {
         viewModelScope.launch { _action.emit(actionBlock()) }
     }
 }
