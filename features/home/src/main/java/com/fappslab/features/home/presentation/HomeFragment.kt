@@ -20,7 +20,7 @@ import com.fappslab.libraries.arch.viewmodel.onViewAction
 import com.fappslab.libraries.arch.viewmodel.onViewState
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
-class HomeFragment : Fragment(R.layout.home_fragment) {
+internal class HomeFragment : Fragment(R.layout.home_fragment) {
 
     private val binding: HomeFragmentBinding by viewBinding()
     private val viewModel: HomeViewModel by sharedViewModel()

@@ -17,4 +17,5 @@ rootProject.name = "Aptoide"
 include ':app',
         ':features:home',
         ':libraries:arch',
-        ':libraries:design'
+        ':libraries:design',
+        ':libraries:navigation'

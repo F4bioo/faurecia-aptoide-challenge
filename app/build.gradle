@@ -65,4 +65,5 @@ dependencies {
     implementation project(Modules.home)
     implementation project(Modules.design)
     implementation project(Modules.arch)
+    implementation project(Modules.navigation)
 }
