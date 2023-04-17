@@ -15,6 +15,8 @@ object Libs {
     const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines_version}"
 
     // Koin
+    const val koinCore = "io.insert-koin:koin-core:${Versions.koin_version}"
+    const val koinAndroid = "io.insert-koin:koin-android:${Versions.koin_version}"
     const val koinScope = "io.insert-koin:koin-androidx-scope:${Versions.koin_version}"
     const val koinViewModel = "io.insert-koin:koin-androidx-viewmodel:${Versions.koin_version}"
 

@@ -6,11 +6,17 @@ apply from: "$rootDir/plugins/android-build.gradle"
 
 android {
     namespace "${Config.applicationId}.libraries.arch"
+
+    defaultConfig {
+        buildConfigField "String", "BASE_URL", '"http://ws2.aptoide.com/"'
+    }
 }
 
 dependencies {
     // Libs
-    api(Libs.gson)
+    implementation(Libs.okhttpLoggingInterceptor)
+    implementation(Libs.retrofitConverterGson)
+    implementation(Libs.okhttp)
     implementation(TestLibs.coroutinesTest)
     implementation(TestLibs.junitTest)
 }
