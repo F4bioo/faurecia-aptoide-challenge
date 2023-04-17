@@ -1,0 +1,271 @@
+{
+  "info": {
+    "status": "OK",
+    "time": {
+      "seconds": 0.02001500129699707,
+      "human": "20 milliseconds"
+    }
+  },
+  "data": {
+    "id": 53261022,
+    "name": "Word Chaos",
+    "package": "com.giantixstudios.wordchaos",
+    "uname": "word-chaos",
+    "size": 9884558,
+    "icon": "https://pool.img.aptoide.com/split-store/b35a49371ba9baee29c0783570a0f502_icon.png",
+    "graphic": "https://pool.img.aptoide.com/split-store/dc596da62a59a79b1cc35c20078b6b74.png",
+    "added": "2020-05-20 02:48:11",
+    "modified": "2020-09-09 19:39:24",
+    "updated": "2023-04-15 18:52:41",
+    "main_package": null,
+    "age": {
+      "name": "all",
+      "title": "Everyone",
+      "pegi": "PEGI-3",
+      "rating": 0
+    },
+    "developer": {
+      "id": 84610,
+      "name": "Giantix Studios",
+      "website": null,
+      "email": "support@giantixstudios.com",
+      "privacy": "http://privacy.giantixstudios.com"
+    },
+    "store": {
+      "id": 2662743,
+      "name": "split-store",
+      "avatar": "https://pool.img.aptoide.com/split-store/3bf5adf05843f9f28c486d5ddef8f873_ravatar.jpg",
+      "appearance": {
+        "theme": "blue-grey",
+        "description": "The only store you will ever need!"
+      },
+      "stats": {
+        "apps": 383107,
+        "subscribers": 21052,
+        "downloads": 80543174
+      }
+    },
+    "file": {
+      "vername": "1.2.0",
+      "vercode": 9,
+      "md5sum": "a8e728aa3220cd068b691d39a5cf4c3a",
+      "filesize": 9884558,
+      "added": "2020-09-09 19:39:24",
+      "path": "https://pool.apk.aptoide.com/split-store/com-giantixstudios-wordchaos-9-53261022-a8e728aa3220cd068b691d39a5cf4c3a.apk",
+      "path_alt": "https://pool.apk.aptoide.com/split-store/alt/Y29tLWdpYW50aXhzdHVkaW9zLXdvcmRjaGFvcy05LTUzMjYxMDIyLWE4ZTcyOGFhMzIyMGNkMDY4YjY5MWQzOWE1Y2Y0YzNh.apk",
+      "signature": {
+        "sha1": "97:38:F6:BE:EB:EF:03:E1:6A:8E:1D:74:49:99:BC:3B:6B:74:C5:4A",
+        "owner": "O=Giantix Studios"
+      },
+      "hardware": {
+        "sdk": 16,
+        "screen": "SMALL",
+        "gles": 2,
+        "cpus": [
+          "x86",
+          "x86-64",
+          "armeabi-v7a",
+          "arm64-v8a"
+        ],
+        "densities": [],
+        "dependencies": []
+      },
+      "malware": {
+        "rank": "TRUSTED",
+        "reason": {
+          "signature_validated": {
+            "date": "2020-09-09",
+            "status": "passed",
+            "signature_from": "market"
+          },
+          "scanned": {
+            "status": "passed",
+            "date": "2021-02-28 12:39:37",
+            "av_info": [
+              {
+                "infections": [],
+                "name": "drweb 9.01.2"
+              },
+              {
+                "infections": [],
+                "name": "vipre 3.0.3.374"
+              },
+              {
+                "infections": [],
+                "name": "mcafee"
+              },
+              {
+                "infections": [],
+                "name": "trendmicro 7.0.0.1443"
+              },
+              {
+                "infections": [],
+                "name": "zoner 1.11.0"
+              },
+              {
+                "infections": [],
+                "name": "sophos 6.0.1789"
+              },
+              {
+                "infections": [],
+                "name": "ikarus 1.7.38"
+              },
+              {
+                "infections": [],
+                "name": "norton"
+              }
+            ]
+          }
+        },
+        "added": "2020-09-09 19:39:25",
+        "modified": "2021-03-01 19:39:34"
+      },
+      "flags": {
+        "votes": [
+          {
+            "type": "FAKE",
+            "count": 0
+          },
+          {
+            "type": "FREEZE",
+            "count": 0
+          },
+          {
+            "type": "GOOD",
+            "count": 0
+          },
+          {
+            "type": "LICENSE",
+            "count": 0
+          },
+          {
+            "type": "VIRUS",
+            "count": 0
+          }
+        ]
+      },
+      "used_features": [
+        "android.hardware.faketouch",
+        "android.hardware.screen.landscape"
+      ],
+      "used_permissions": [
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.INTERNET",
+        "android.permission.WAKE_LOCK"
+      ],
+      "tags": []
+    },
+    "media": {
+      "keywords": [
+        "giantixstudios",
+        "wordchaos",
+        "word",
+        "chaos"
+      ],
+      "description": "Word Chaos is a challenging word game that puts your word skills to the test. The object of the game is to form words from a given set of letters. There are three different game modes. In Puzzle Mode you must find all possible words that can be formed from the letters provided, in Timed Mode you must find a specific word within the given time limit and in Relaxed Mode you can play without a time limit.\n\nPrivacy Policy - http://privacy.giantixstudios.com\nEULA - http://eula.giantixstudios.com\n",
+      "summary": "",
+      "news": "- Stability and performance improvements.\n\n- Auto-hide navigation bar.",
+      "videos": [],
+      "screenshots": [
+        {
+          "url": "https://pool.img.aptoide.com/split-store/5beb3be41eebe28f5ab9fad50b383f72_screen.png",
+          "height": 768,
+          "width": 1280
+        },
+        {
+          "url": "https://pool.img.aptoide.com/split-store/1dde3858b102791778b4122b2d303197_screen.png",
+          "height": 768,
+          "width": 1280
+        },
+        {
+          "url": "https://pool.img.aptoide.com/split-store/0153ba64e859f3b563ffccd04b01ecf5_screen.png",
+          "height": 768,
+          "width": 1280
+        },
+        {
+          "url": "https://pool.img.aptoide.com/split-store/4dc584fe57c6a628213eb6d30e534c0c_screen.png",
+          "height": 480,
+          "width": 800
+        },
+        {
+          "url": "https://pool.img.aptoide.com/split-store/0fa4cf467406ec947ad7127f2869b300_screen.png",
+          "height": 480,
+          "width": 800
+        },
+        {
+          "url": "https://pool.img.aptoide.com/split-store/3a0bc0a396e669bdf56674a0e13a572a_screen.png",
+          "height": 480,
+          "width": 800
+        }
+      ]
+    },
+    "urls": {
+      "w": "https://word-chaos.en.aptoide.com/?store_name=split-store&app_id=53261022",
+      "m": "https://word-chaos.en.aptoide.com/?store_name=split-store&app_id=53261022"
+    },
+    "stats": {
+      "rating": {
+        "avg": 0,
+        "total": 0,
+        "votes": [
+          {
+            "value": 5,
+            "count": 0
+          },
+          {
+            "value": 4,
+            "count": 0
+          },
+          {
+            "value": 3,
+            "count": 0
+          },
+          {
+            "value": 2,
+            "count": 0
+          },
+          {
+            "value": 1,
+            "count": 0
+          }
+        ]
+      },
+      "prating": {
+        "avg": 0,
+        "total": 0,
+        "votes": [
+          {
+            "value": 5,
+            "count": 0
+          },
+          {
+            "value": 4,
+            "count": 0
+          },
+          {
+            "value": 3,
+            "count": 0
+          },
+          {
+            "value": 2,
+            "count": 0
+          },
+          {
+            "value": 1,
+            "count": 0
+          }
+        ]
+      },
+      "downloads": 31,
+      "pdownloads": 647
+    },
+    "aab": null,
+    "obb": null,
+    "pay": null,
+    "appcoins": {
+      "advertising": false,
+      "billing": false,
+      "flags": []
+    }
+  }
+}
