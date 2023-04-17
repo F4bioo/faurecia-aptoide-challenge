@@ -1,0 +1,8 @@
+<resources>
+    <string name="details_download">Download</string>
+    <string name="details_bout_description">Description</string>
+    <string name="details_bout_store">About store</string>
+    <string name="details_email"><![CDATA[<b>E-mail:</b>\n%s]]></string>
+    <string name="details_name"><![CDATA[<b>Name:</b>\n%s]]></string>
+    <string name="details_privacy"><![CDATA[<b>Privacy:</b>\n%s]]></string>
+</resources>
