@@ -19,4 +19,5 @@ dependencies {
     implementation(Libs.okhttp)
     implementation(TestLibs.coroutinesTest)
     implementation(TestLibs.junitTest)
+    implementation(TestLibs.mockWebserverTest)
 }

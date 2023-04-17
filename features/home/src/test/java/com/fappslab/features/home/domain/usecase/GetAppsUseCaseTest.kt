@@ -1,7 +1,7 @@
 package com.fappslab.features.home.domain.usecase
 
 import com.fappslab.features.home.domain.repository.HomeRepository
-import com.fappslab.features.home.domain.stub.appsStub
+import com.fappslab.features.home.stub.appsStub
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
