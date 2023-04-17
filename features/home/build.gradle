@@ -11,6 +11,8 @@ android {
 
 dependencies {
     // Libs
+    implementation(Libs.swipeRefresh)
+    implementation(Libs.lottie)
 
     // Modules
     implementation project(Modules.design)

@@ -1,4 +1,4 @@
-package com.fappslab.libraries.arch.rules
+package com.fappslab.libraries.arch.testing.rules
 
 import androidx.annotation.VisibleForTesting
 import com.google.gson.Gson

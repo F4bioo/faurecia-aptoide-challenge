@@ -9,6 +9,7 @@ object Libs {
     const val fragment = "androidx.fragment:fragment:${Versions.fragment_version}"
     const val fragmentKtx = "androidx.fragment:fragment-ktx:${Versions.fragment_version}"
     const val annotation = "androidx.annotation:annotation:${Versions.annotation_version}"
+    const val swipeRefresh = "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.swipeRefresh_version}"
 
     // Kotlin
     const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines_version}"
@@ -28,14 +29,17 @@ object Libs {
     const val retrofitConverterGson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit_version}"
     const val retrofitRxJava2Adapter = "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofit_version}"
 
-    // Gson
-    const val gson = "com.google.code.gson:gson:${Versions.gson_version}"
-
     // Images
-    const val coil = "io.coil-kt:coil:${Versions.coil_version}"
+    const val glide = "com.github.bumptech.glide:glide:${Versions.glide_version}"
+    const val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glide_version}"
+    const val glideTransformation = "jp.wasabeef:glide-transformations:${Versions.glide_transformation_version}"
     const val lottie = "com.airbnb.android:lottie:${Versions.lottie_version}"
 
     // RX Java
     const val rxjava = "io.reactivex.rxjava2:rxjava:${Versions.rxjava_version}"
     const val rxandroid = "io.reactivex.rxjava2:rxandroid:${Versions.rxAndroid_version}"
+
+    // Others
+    const val gson = "com.google.code.gson:gson:${Versions.gson_version}"
+    const val timber = "com.jakewharton.timber:timber:${Versions.timber_version}"
 }

@@ -1,4 +1,4 @@
-package com.fappslab.libraries.arch.rules
+package com.fappslab.libraries.arch.testing.rules
 
 import androidx.annotation.VisibleForTesting
 import kotlinx.coroutines.Dispatchers
@@ -12,7 +12,7 @@ import org.junit.runner.Description
 import java.lang.reflect.Modifier
 
 @VisibleForTesting(otherwise = Modifier.PRIVATE)
-@ExperimentalCoroutinesApi
+@OptIn(ExperimentalCoroutinesApi::class)
 open class DispatcherTestRule(
     open val testDispatcher: TestDispatcher = StandardTestDispatcher()
 ) : TestWatcher() {

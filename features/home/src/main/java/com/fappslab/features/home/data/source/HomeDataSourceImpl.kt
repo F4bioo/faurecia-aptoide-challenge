@@ -3,6 +3,7 @@ package com.fappslab.features.home.data.source
 import com.fappslab.features.home.data.api.HomeService
 import com.fappslab.features.home.data.mapper.toApps
 import com.fappslab.features.home.domain.model.Apps
+import com.fappslab.libraries.arch.extension.parseHttpError
 import io.reactivex.Single
 
 internal class HomeDataSourceImpl(
@@ -10,5 +11,7 @@ internal class HomeDataSourceImpl(
 ) : HomeDataSource {
 
     override fun getApps(): Single<Apps> =
-        service.getApps().map { it.toApps() }
+        service.getApps()
+            .map { it.toApps() }
+            .parseHttpError()
 }

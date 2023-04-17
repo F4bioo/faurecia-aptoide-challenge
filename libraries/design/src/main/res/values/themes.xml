@@ -45,16 +45,17 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="DsTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
-        <item name="android:textColor">#333</item>
-        <item name="colorPrimary">#5F5F5F</item>
-        <item name="boxBackgroundColor">@color/ds_input_layout</item>
-        <item name="boxStrokeErrorColor">#E91E63</item>
-        <item name="boxStrokeColor">#5F5F5F</item>
-        <item name="boxStrokeWidth">1dp</item>
-        <item name="boxStrokeWidthFocused">2dp</item>
-        <item name="boxCornerRadiusTopEnd">8dp</item>
-        <item name="boxCornerRadiusTopStart">8dp</item>
+    <style name="DsPrimaryButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textColor">@color/ds_white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:height">55dp</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <style name="DsSecondaryButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/ds_on_secondary</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">8dp</item>
     </style>
 
     <style name="DsBottomSheet" parent="@style/Theme.Design.Light.BottomSheetDialog">
