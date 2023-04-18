@@ -15,6 +15,7 @@ dependencyResolutionManagement {
 rootProject.name = "Aptoide"
 // Keep it in alphabetical order
 include ':app',
+        ':features:details',
         ':features:home',
         ':libraries:arch',
         ':libraries:design',
