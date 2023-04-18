@@ -39,8 +39,7 @@ internal data class AppResponse(
             @SerializedName("id") val id: Int?,
             @SerializedName("email") val email: String?,
             @SerializedName("name") val name: String?,
-            @SerializedName("privacy") val privacy: String?,
-            @SerializedName("website") val website: String?
+            @SerializedName("privacy") val privacy: String?
         )
 
         internal data class StoreResponse(

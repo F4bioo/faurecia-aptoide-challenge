@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image_avatar"
+        android:layout_width="@dimen/ds_size_19"
+        android:layout_height="@dimen/ds_size_19"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/image_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ds_size_02"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ds_ic_shield"
+        app:layout_constraintBottom_toTopOf="@id/text_rank"
+        app:layout_constraintEnd_toEndOf="@id/text_rank"
+        app:layout_constraintStart_toStartOf="@id/text_rank"
+        tools:tint="@color/ds_green" />
+
+    <TextView
+        android:id="@+id/text_rank"
+        style="@style/DsTextSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="@id/image_avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_avatar"
+        tools:text="Thrust" />
+
+    <TextView
+        android:id="@+id/text_tile"
+        style="@style/DsTextHighlightLarge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_size_04"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_avatar"
+        tools:text="@tools:sample/lorem" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/include_app_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="text_downloads, text_size"
+        app:flow_horizontalBias="0.5"
+        app:flow_horizontalGap="@dimen/ds_size_02"
+        app:flow_horizontalStyle="packed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_tile" />
+
+    <TextView
+        android:id="@+id/text_downloads"
+        style="@style/DsTextSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/ds_size_01"
+        android:gravity="center_vertical"
+        app:drawableLeftCompat="@drawable/ds_ic_download"
+        app:drawableTint="@color/ds_gray_medium"
+        tools:ignore="MissingConstraints"
+        tools:text="71 k" />
+
+    <TextView
+        android:id="@+id/text_size"
+        style="@style/DsTextSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/ds_size_01"
+        android:gravity="center_vertical"
+        app:drawableLeftCompat="@drawable/ds_ic_chart"
+        app:drawableTint="@color/ds_gray_medium"
+        tools:ignore="MissingConstraints"
+        tools:text="6.1 MB" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_download"
+        style="@style/DsPrimaryButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/ds_size_14"
+        android:layout_marginTop="@dimen/ds_size_04"
+        android:text="@string/details_download"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include_app_info" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

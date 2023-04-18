@@ -27,8 +27,7 @@ internal data class App(
         val id: Int,
         val email: String,
         val name: String,
-        val privacy: String,
-        val website: String
+        val privacy: String
     )
 
     internal data class Store(

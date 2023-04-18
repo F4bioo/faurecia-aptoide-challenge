@@ -50,8 +50,7 @@ internal fun DeveloperResponse?.toDeveloper() =
         id = this?.id.orZero(),
         email = this?.email.orEmpty(),
         name = this?.name.orEmpty(),
-        privacy = this?.privacy.orEmpty(),
-        website = this?.website.orEmpty()
+        privacy = this?.privacy.orEmpty()
     )
 
 internal fun StoreResponse?.toStore() =
