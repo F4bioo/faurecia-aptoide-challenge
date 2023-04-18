@@ -9,7 +9,7 @@
   "errors": [
     {
       "code": "APP-1",
-      "description": "Application 'package:com.giantixstudios.wordchaos' not found",
+      "description": "Application 'package:com.instagram.android' not found",
       "details": {}
     }
   ]

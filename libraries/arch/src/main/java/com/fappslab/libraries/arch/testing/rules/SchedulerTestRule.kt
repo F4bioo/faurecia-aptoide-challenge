@@ -11,18 +11,18 @@ import org.junit.runners.model.Statement
 import java.lang.reflect.Modifier
 
 @VisibleForTesting(otherwise = Modifier.PRIVATE)
-class SchedulersTestRule(
-    private val scheduler: Scheduler = Schedulers.trampoline()
+open class SchedulerTestRule(
+    open val testScheduler: Scheduler = Schedulers.trampoline()
 ) : TestRule {
 
     override fun apply(base: Statement, description: Description): Statement =
         object : Statement() {
             override fun evaluate() {
-                RxJavaPlugins.setIoSchedulerHandler { scheduler }
-                RxJavaPlugins.setComputationSchedulerHandler { scheduler }
-                RxJavaPlugins.setNewThreadSchedulerHandler { scheduler }
-                RxAndroidPlugins.setInitMainThreadSchedulerHandler { scheduler }
-                RxAndroidPlugins.setMainThreadSchedulerHandler { scheduler }
+                RxJavaPlugins.setIoSchedulerHandler { testScheduler }
+                RxJavaPlugins.setComputationSchedulerHandler { testScheduler }
+                RxJavaPlugins.setNewThreadSchedulerHandler { testScheduler }
+                RxAndroidPlugins.setInitMainThreadSchedulerHandler { testScheduler }
+                RxAndroidPlugins.setMainThreadSchedulerHandler { testScheduler }
 
                 base.evaluate()
 

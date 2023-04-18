@@ -12,11 +12,21 @@ import java.util.concurrent.TimeoutException
 
 private const val UNEXPECTED_ERROR_MESSAGE = "Unexpected error, please try again."
 
-internal fun HttpException.parseError(): Throwable = runCatching {
-    Gson().fromJson(response()?.errorBody()?.string(), RemoteThrowable::class.java)
-}.getOrNull()?.errors?.firstOrNull()?.description?.let {
-    HttpThrowable(message = it, throwable = this)
-} ?: HttpThrowable(message = UNEXPECTED_ERROR_MESSAGE, throwable = this)
+private fun HttpException.getCause(errorBody: String?): Throwable {
+    return getRemoteThrowable(errorBody).errors?.firstOrNull()?.description?.let {
+        HttpThrowable(message = it, throwable = this)
+    } ?: HttpThrowable(message = UNEXPECTED_ERROR_MESSAGE, throwable = this)
+}
+
+private fun getRemoteThrowable(errorBody: String?): RemoteThrowable {
+    return Gson().fromJson(errorBody, RemoteThrowable::class.java)
+}
+
+internal fun HttpException.parseError(): Throwable {
+    return runCatching {
+        getCause(errorBody = response()?.errorBody()?.string())
+    }.getOrElse { HttpThrowable(message = UNEXPECTED_ERROR_MESSAGE, throwable = this) }
+}
 
 internal fun Throwable.toThrowable(): Throwable = when (this) {
     is HttpException -> parseError()

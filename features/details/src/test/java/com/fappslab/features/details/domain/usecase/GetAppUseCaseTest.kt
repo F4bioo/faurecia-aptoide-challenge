@@ -7,7 +7,6 @@ import io.mockk.mockk
 import io.mockk.verify
 import io.reactivex.Single
 import org.junit.Test
-import kotlin.test.assertEquals
 
 internal class GetAppUseCaseTest {
 
@@ -17,28 +16,32 @@ internal class GetAppUseCaseTest {
     @Test
     fun `getAppSuccess Should emit Apps When invoke`() {
         // Given
-        val app = appStub()
-        val expectedResult = Single.just(app)
-        every { repository.getApp(any()) } returns expectedResult
+        val expectedResult = appStub()
+        every { repository.getApp(any()) } returns Single.just(expectedResult)
 
         // When
         val result = subject(packageName = "com.instagram.android")
 
         // Then
-        assertEquals(expectedResult, result)
+        result.test().assertValue { app ->
+            expectedResult == app
+        }
         verify { repository.getApp(any()) }
     }
 
     @Test
     fun `getAppFailure Should emit Exception When invoke`() {
         // Given
-        val cause = Throwable("Some error")
-        every { repository.getApp(any()) } returns Single.error(cause)
+        val expectedResult = "Some error"
+        every { repository.getApp(any()) } returns Single.error(Throwable(expectedResult))
+
+        // When
+        val result = subject(packageName = "com.instagram.android")
 
         // Then
-        subject(packageName = "com.instagram.android")
-            .test()
-            .assertError { it.message == "Some error" }
+        result.test().assertError { cause ->
+            expectedResult == cause.message
+        }
         verify { repository.getApp(any()) }
     }
 }
