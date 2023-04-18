@@ -1,0 +1,16 @@
+{
+  "info": {
+    "status": "FAIL",
+    "time": {
+      "seconds": 0.010694026947021484,
+      "human": "11 milliseconds"
+    }
+  },
+  "errors": [
+    {
+      "code": "APP-1",
+      "description": "Application 'package:com.giantixstudios.wordchaos' not found",
+      "details": {}
+    }
+  ]
+}
