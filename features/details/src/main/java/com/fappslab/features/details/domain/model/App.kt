@@ -10,7 +10,7 @@ internal data class App(
     val added: String,
     val modified: String,
     val updated: String,
-    val downloads: Int,
+    val downloads: String,
     val age: Age,
     val developer: Developer,
     val store: Store,
@@ -41,7 +41,7 @@ internal data class App(
         val added: String,
         val path: String,
         val pathAlt: String,
-        val fileSize: Int,
+        val fileSize: String,
         val malware: Malware,
         val flags: Flags,
         val usedPermissions: List<String>

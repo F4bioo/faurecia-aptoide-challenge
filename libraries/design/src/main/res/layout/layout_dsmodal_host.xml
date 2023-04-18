@@ -14,7 +14,8 @@
         android:padding="@dimen/ds_size_02"
         android:src="@drawable/ds_ic_cancel"
         app:layout_constraintEnd_toEndOf="@id/container_fragment"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/ds_gray_light" />
 
     <FrameLayout
         android:id="@+id/container_fragment"

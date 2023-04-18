@@ -6,12 +6,12 @@ import io.reactivex.Scheduler
 import io.reactivex.Single
 import io.reactivex.schedulers.Schedulers
 
-fun <T> Single<T>.applyIoToUiSchedulers(scheduler: Scheduler): Single<T> {
+fun <T> Single<T>.schedulerOn(scheduler: Scheduler): Single<T> {
     return subscribeOn(Schedulers.io())
         .observeOn(scheduler)
 }
 
-fun Completable.applyIoToUiSchedulers(schedulers: Scheduler): Completable {
+fun Completable.schedulerOn(schedulers: Scheduler): Completable {
     return subscribeOn(Schedulers.io())
         .observeOn(schedulers)
 }

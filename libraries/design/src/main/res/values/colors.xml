@@ -15,5 +15,7 @@
     <color name="ds_bg_ds_modal_host">#FFFFFFFF</color>
     <color name="ds_highlight_medium">#1BFF9800</color>
     <color name="ds_gray_medium">#696969</color>
+    <color name="ds_gray_light">#B8B8B8</color>
     <color name="ds_green">#4CAF50</color>
+    <color name="ds_red">#E5281A</color>
 </resources>

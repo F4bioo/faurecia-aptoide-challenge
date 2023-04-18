@@ -3,7 +3,8 @@
     <string name="details_download">Baixar</string>
     <string name="details_bout_description">Descrição</string>
     <string name="details_bout_store">Sobre a loja</string>
-    <string name="details_email"><![CDATA[<b>E-mail:</b>\n%s]]></string>
-    <string name="details_name"><![CDATA[<b>Nome:</b>\n%s]]></string>
-    <string name="details_privacy"><![CDATA[<b>Privacidade:</b>\n%s]]></string>
+    <string name="details_email"><![CDATA[<b>E-mail:</b><br>%s]]></string>
+    <string name="details_name"><![CDATA[<b>Nome:</b><br>%s]]></string>
+    <string name="details_privacy"><![CDATA[<b>Privacidade:</b><br>%s]]></string>
+    <string name="details_download_finished">Download finalizado.</string>
 </resources>

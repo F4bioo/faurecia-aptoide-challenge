@@ -2,8 +2,8 @@ package com.fappslab.features.home.presentation.viewmodel
 
 import app.cash.turbine.test
 import com.fappslab.aptoide.features.home.R
-import com.fappslab.features.home.domain.model.Apps
 import com.fappslab.features.home.domain.usecase.GetAppsUseCase
+import com.fappslab.features.home.stub.ReturnsType
 import com.fappslab.features.home.stub.appStub
 import com.fappslab.features.home.stub.appsStub
 import com.fappslab.libraries.arch.testing.rules.DispatcherTestRule
@@ -45,7 +45,7 @@ internal class HomeViewModelTest {
         val expectedState = initialState.copy(apps = apps.list)
 
         // When
-        setupSubject { Single.just(apps) }
+        setupSubject(with = ReturnsType.SUCCESS)
 
         // Then
         runTest {
@@ -97,7 +97,7 @@ internal class HomeViewModelTest {
         // Given
         val apps = appsStub()
         val expectedState = initialState.copy(apps = apps.list, flipperChild = SUCCESS_CHILD)
-        setupSubject { Single.just(apps) }
+        setupSubject(with = ReturnsType.SUCCESS)
 
         // When
         subject.onSubmitList()
@@ -113,10 +113,10 @@ internal class HomeViewModelTest {
 
     @Test
     fun `onRefreshSuccess Should expose expected state When invoke refresh`() {
-        //
+        // Given
         val apps = appsStub()
         val expectedState = initialState.copy(apps = apps.list)
-        setupSubject { Single.just(apps) }
+        setupSubject(with = ReturnsType.SUCCESS)
 
         // When
         subject.onRefresh()
@@ -137,7 +137,7 @@ internal class HomeViewModelTest {
         val message = "Some error"
         val expectedState = initialState.copy(apps = apps.list)
         val expectedAction = HomeViewAction.Error(shouldShow = true, message = message)
-        setupSubject { Single.just(apps) }
+        setupSubject(with = ReturnsType.SUCCESS)
         every { getAppsUseCase() } returns Single.error(Throwable(message))
 
         // When
@@ -162,7 +162,7 @@ internal class HomeViewModelTest {
         val message = "Some error"
         val expectedState = initialState.copy(apps = apps.list)
         val expectedAction = HomeViewAction.Error(shouldShow = true, message = message)
-        setupSubject { Single.just(apps) }
+        setupSubject(with = ReturnsType.SUCCESS)
         every { getAppsUseCase() } returns Single.error(Throwable(message))
 
         // When
@@ -183,9 +183,8 @@ internal class HomeViewModelTest {
     @Test
     fun `onErrorDismiss Should expose Error action When invoke error dismiss with populated list`() {
         // Given
-        val apps = appsStub()
         val expectedAction = HomeViewAction.Error(shouldShow = false, message = null)
-        setupSubject { Single.just(apps) }
+        setupSubject(with = ReturnsType.SUCCESS)
 
         // When
         subject.onErrorDismiss()
@@ -225,7 +224,7 @@ internal class HomeViewModelTest {
         //
         val apps = appsStub()
         val expectedState = initialState.copy(apps = apps.list)
-        setupSubject { Single.just(apps) }
+        setupSubject(with = ReturnsType.SUCCESS)
 
         // When
         subject.onEmptyViewClicked()
@@ -246,7 +245,7 @@ internal class HomeViewModelTest {
         val message = "Some error"
         val expectedState = initialState.copy(apps = apps.list)
         val expectedAction = HomeViewAction.Error(shouldShow = true, message = message)
-        setupSubject { Single.just(apps) }
+        setupSubject(with = ReturnsType.SUCCESS)
         every { getAppsUseCase() } returns Single.error(Throwable(message))
 
         // When
@@ -282,8 +281,8 @@ internal class HomeViewModelTest {
         verify { getAppsUseCase() }
     }
 
-    private fun setupSubject(everyBlock: () -> Single<Apps> = { Single.error(Throwable()) }) {
-        every { getAppsUseCase() } returns everyBlock()
+    private fun setupSubject(with: ReturnsType = ReturnsType.FAILURE) {
+        every { getAppsUseCase() } returns with.type
         subject = HomeViewModel(
             getAppsUseCase = getAppsUseCase,
             scheduler = schedulerRule.testScheduler

@@ -34,6 +34,8 @@ object Libs {
     const val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glide_version}"
     const val glideTransformation = "jp.wasabeef:glide-transformations:${Versions.glide_transformation_version}"
     const val lottie = "com.airbnb.android:lottie:${Versions.lottie_version}"
+    const val shimmer = "com.facebook.shimmer:shimmer:${Versions.shimmer_version}"
+    const val coil = "io.coil-kt:coil:${Versions.coil_version}"
 
     // RX Java
     const val rxjava = "io.reactivex.rxjava2:rxjava:${Versions.rxjava_version}"

@@ -6,6 +6,6 @@
     <string name="common_await">Aguarde…</string>
     <string name="common_close">Fechar</string>
     <string name="common_back">Voltar</string>
-    <string name="common_error_title">Algo de errado aconmteceu!!</string>
+    <string name="common_error_title">Algo de errado aconmteceu!</string>
     <string name="common_error_message">Verifique a conexão com a Internet e tente novamente.</string>
 </resources>

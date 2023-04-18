@@ -11,6 +11,7 @@ android {
 
 dependencies {
     // Libs
+    implementation(Libs.shimmer)
     implementation(Libs.lottie)
 
     // Modules

@@ -21,6 +21,8 @@ object Versions {
     const val jacoco_version = "0.8.6"
     const val swipeRefresh_version = "1.1.0"
     const val timber_version = "4.7.1"
+    const val shimmer_version = "0.5.0"
+    const val coil_version = "2.3.0"
 
     // Tests Libs versions
     const val junit_version = "4.13.2"
