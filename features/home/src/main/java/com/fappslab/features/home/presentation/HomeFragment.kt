@@ -18,12 +18,15 @@ import com.fappslab.features.home.presentation.viewmodel.HomeViewModel
 import com.fappslab.libraries.arch.viewbinding.viewBinding
 import com.fappslab.libraries.arch.viewmodel.onViewAction
 import com.fappslab.libraries.arch.viewmodel.onViewState
+import com.fappslab.libraries.navigation.DetailsNavigation
+import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 internal class HomeFragment : Fragment(R.layout.home_fragment) {
 
     private val binding: HomeFragmentBinding by viewBinding()
     private val viewModel: HomeViewModel by sharedViewModel()
+    private val detailsNavigation: DetailsNavigation by inject()
     private val adapterEditors by lazy { EditorsAdapter(viewModel::onClickItem) }
     private val adapterTops by lazy { TopsAdapter(viewModel::onClickItem) }
     private val trendingAdapter by lazy { TrendingAdapter(viewModel::onClickItem) }
@@ -79,8 +82,9 @@ internal class HomeFragment : Fragment(R.layout.home_fragment) {
         recyclerTrending.commonSetup()
     }
 
-    private fun navigateToDetailsAction(action: HomeViewAction.Details) {
-        println("<> packageName: ${action.packageName}")
+    private fun navigateToDetailsAction(action: HomeViewAction.Details) = context?.let {
+        detailsNavigation.create(context = it, action.packageName)
+            .also(::startActivity)
     }
 
     private fun submitListState(apps: List<App>?) {

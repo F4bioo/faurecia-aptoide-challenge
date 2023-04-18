@@ -3,28 +3,51 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/ds_highlight_medium"
+    android:padding="@dimen/ds_size_04">
 
-    <ImageView
+    <ImageButton
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/common_back"
+        android:padding="@dimen/ds_size_02"
+        android:src="@drawable/ds_ic_arrow_back"
+        app:layout_constraintBottom_toBottomOf="@+id/image_avatar"
+        app:layout_constraintEnd_toStartOf="@id/image_avatar"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:tint="@color/ds_gray_light" />
+
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/image_avatar"
-        android:layout_width="@dimen/ds_size_19"
-        android:layout_height="@dimen/ds_size_19"
+        android:layout_width="@dimen/ds_size_20"
+        android:layout_height="@dimen/ds_size_20"
         android:importantForAccessibility="no"
+        android:padding="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/DsImageRounded"
+        android:elevation="1dp"
         tools:src="@tools:sample/avatars" />
 
     <ImageView
         android:id="@+id/image_rank"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/ds_size_07"
+        android:layout_height="@dimen/ds_size_07"
         android:layout_marginBottom="@dimen/ds_size_02"
         android:importantForAccessibility="no"
-        android:src="@drawable/ds_ic_shield"
+        android:src="@drawable/ds_ic_shield_2"
         app:layout_constraintBottom_toTopOf="@id/text_rank"
         app:layout_constraintEnd_toEndOf="@id/text_rank"
         app:layout_constraintStart_toStartOf="@id/text_rank"
+        app:layout_constraintTop_toTopOf="@+id/image_avatar"
+        app:layout_constraintVertical_bias="1"
         tools:tint="@color/ds_green" />
 
     <TextView
@@ -32,11 +55,14 @@
         style="@style/DsTextSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_size_04"
         android:textAllCaps="true"
+        android:textSize="@dimen/ds_text_size_01"
         app:layout_constraintBottom_toBottomOf="@id/image_avatar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/image_avatar"
-        tools:text="Thrust" />
+        tools:text="Trusted" />
 
     <TextView
         android:id="@+id/text_tile"

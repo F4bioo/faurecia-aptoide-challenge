@@ -2,6 +2,7 @@ package com.fappslab.features.home.navigation
 
 import androidx.fragment.app.testing.launchFragment
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.fappslab.aptoide.libraries.design.R
 import com.fappslab.features.home.presentation.HomeFragment
 import com.fappslab.features.home.presentation.viewmodel.HomeViewModel
 import com.fappslab.features.home.presentation.viewmodel.HomeViewState
@@ -17,7 +18,6 @@ import org.koin.dsl.module
 import org.koin.test.KoinTestRule
 import kotlin.test.assertEquals
 import kotlin.test.assertIs
-import com.fappslab.aptoide.libraries.design.R
 
 @RunWith(AndroidJUnit4::class)
 internal class HomeNavigationImplTest {

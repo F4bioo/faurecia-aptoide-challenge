@@ -6,9 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.fappslab.aptoide.features.home.databinding.HomeSmallCoverItemBinding
 import com.fappslab.features.home.domain.model.App
 import com.fappslab.features.home.presentation.adapter.OnItemClicked
-import com.fappslab.features.home.presentation.extension.params
 import com.fappslab.libraries.arch.extension.capitalizeFirstChar
-import com.fappslab.libraries.arch.extension.load
+import com.fappslab.libraries.design.extension.loadImage
 
 internal class TopsViewHolder(
     private val binding: HomeSmallCoverItemBinding,
@@ -16,7 +15,7 @@ internal class TopsViewHolder(
 ) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(app: App) = binding.run {
-        imageAvatar.load(app.icon.params())
+        imageAvatar.loadImage(app.icon)
         textName.text = app.name.capitalizeFirstChar()
         textStore.text = app.storeName.capitalizeFirstChar()
         cardAvatar.setOnClickListener { itemClicked(app) }

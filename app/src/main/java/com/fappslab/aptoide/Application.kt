@@ -1,6 +1,7 @@
 package com.fappslab.aptoide
 
 import android.app.Application
+import com.fappslab.features.details.di.DetailsModule
 import com.fappslab.features.home.di.HomeModule
 import com.fappslab.libraries.arch.di.ArchModule
 import org.koin.android.ext.koin.androidContext
@@ -34,5 +35,6 @@ class Application : Application() {
     private fun koinLoad() {
         ArchModule.load()
         HomeModule.load()
+        DetailsModule.load()
     }
 }

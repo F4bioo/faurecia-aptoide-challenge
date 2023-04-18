@@ -71,9 +71,7 @@ dependencies {
     implementation(Libs.coroutines)
     implementation(Libs.coroutinesCore)
     implementation(Libs.coroutinesRx2)
-    implementation(Libs.glide)
-    implementation(Libs.glideCompiler)
-    implementation(Libs.glideCompiler)
+    implementation(Libs.coil)
     implementation(Libs.lottie)
     implementation(Libs.timber)
 }

@@ -12,25 +12,16 @@ import com.fappslab.aptoide.features.home.R
 import com.fappslab.features.home.presentation.AboutFragment
 import com.fappslab.features.home.presentation.ErrorFragment
 import com.fappslab.features.home.presentation.HomeFragment
-import com.fappslab.libraries.arch.extension.ImageLoadParams
 import com.fappslab.libraries.design.dsmodal.build
 import com.fappslab.libraries.design.dsmodal.dsModalHost
 import com.google.android.material.appbar.MaterialToolbar
-import com.fappslab.aptoide.libraries.design.R as DS
 
 private const val ERROR_TAG = "showErrorBottomSheet"
 private const val ABOUT_TAG = "showAboutBottomSheet"
 
 internal fun RecyclerView.commonSetup() {
-    setHasFixedSize(true)
     itemAnimator = null
 }
-
-internal fun String.params() = ImageLoadParams(
-    imageUrl = this,
-    placeholderRes = DS.drawable.ds_illu_waiting,
-    errorRes = DS.drawable.ds_illu_error_gallery
-)
 
 internal fun HomeFragment.showErrorBottomSheet(
     shouldShow: Boolean,

@@ -18,7 +18,10 @@ import com.fappslab.features.details.domain.model.App.Store
 import com.fappslab.features.details.domain.model.Flags
 import com.fappslab.features.details.domain.model.Malware
 import com.fappslab.features.details.domain.model.Vote
+import com.fappslab.libraries.arch.extension.orDash
 import com.fappslab.libraries.arch.extension.orZero
+import com.fappslab.libraries.arch.extension.toDownloads
+import com.fappslab.libraries.arch.extension.toFileSize
 
 internal fun AppResponse.toApp() =
     App(
@@ -31,7 +34,7 @@ internal fun AppResponse.toApp() =
         added = data?.added.orEmpty(),
         modified = data?.modified.orEmpty(),
         updated = data?.updated.orEmpty(),
-        downloads = data?.stats?.downloads.orZero(),
+        downloads = data?.stats?.downloads.toDownloads(),
         age = data?.age.toAge(),
         developer = data?.developer.toDeveloper(),
         store = data?.store.toStore(),
@@ -48,9 +51,9 @@ internal fun AgeResponse?.toAge() =
 internal fun DeveloperResponse?.toDeveloper() =
     Developer(
         id = this?.id.orZero(),
-        email = this?.email.orEmpty(),
-        name = this?.name.orEmpty(),
-        privacy = this?.privacy.orEmpty()
+        email = this?.email.orDash(),
+        name = this?.name.orDash(),
+        privacy = this?.privacy.orDash()
     )
 
 internal fun StoreResponse?.toStore() =
@@ -66,7 +69,7 @@ internal fun ApkResponse?.toApk() =
         added = this?.added.orEmpty(),
         path = this?.path.orEmpty(),
         pathAlt = this?.pathAlt.orEmpty(),
-        fileSize = this?.fileSize.orZero(),
+        fileSize = this?.fileSize.toFileSize(),
         malware = this?.malware.toMalware(),
         flags = this?.flags.toFlags(),
         usedPermissions = this?.usedPermissions.orEmpty()
@@ -74,7 +77,7 @@ internal fun ApkResponse?.toApk() =
 
 internal fun MalwareResponse?.toMalware() =
     Malware(
-        rank = this?.rank.orEmpty()
+        rank = this?.rank.orDash()
     )
 
 internal fun FlagsResponse?.toFlags() =
@@ -91,6 +94,6 @@ internal fun VoteResponse?.toVote() =
 internal fun ContentResponse?.toContent() =
     Content(
         summary = this?.summary.orEmpty(),
-        description = this?.description.orEmpty(),
+        description = this?.description.orDash(),
         screenshots = this?.screenshots?.map { it.imageUrl.orEmpty() }.orEmpty()
     )
