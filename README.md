@@ -51,6 +51,7 @@ This project was built with Android Android Studio Electric Eel | 2022.1.1,
 * [JaCoCo](https://en.wikipedia.org/wiki/Java_code_coverage_tools)
 
 * [GitHub Actions](https://github.com/features/actions)
+<img src="images/CI.png" width="100%"/>
 
 ## Module dependencies
 
