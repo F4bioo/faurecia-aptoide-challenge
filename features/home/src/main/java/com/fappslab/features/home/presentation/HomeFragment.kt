@@ -9,6 +9,7 @@ import com.fappslab.features.home.domain.model.App
 import com.fappslab.features.home.presentation.adapter.editors.EditorsAdapter
 import com.fappslab.features.home.presentation.adapter.tops.TopsAdapter
 import com.fappslab.features.home.presentation.adapter.trending.TrendingAdapter
+import com.fappslab.features.home.presentation.extension.animHandle
 import com.fappslab.features.home.presentation.extension.commonSetup
 import com.fappslab.features.home.presentation.extension.onMenuItem
 import com.fappslab.features.home.presentation.extension.showAboutBottomSheet
@@ -44,6 +45,7 @@ internal class HomeFragment : Fragment(R.layout.home_fragment) {
             displayedChildState(state.flipperChild)
             refreshLayoutState(state.shouldShowRefreshing)
             emptyViewMessageState(state.emptyViewMessage)
+            animHandleState(state.shouldAnimLottie)
         }
 
         onViewAction(viewModel) { action ->
@@ -64,12 +66,16 @@ internal class HomeFragment : Fragment(R.layout.home_fragment) {
     }
 
     private fun emptyViewMessageState(message: String?) {
-        binding.includeEmptyState.textMessage.text = message
+        binding.includeEmptyState.textEmptyMessage.text = message
+    }
+
+    private fun animHandleState(shouldAnimLottie: Boolean) {
+        binding.includeEmptyState.lottieAnim.animHandle(shouldAnimLottie)
     }
 
     private fun setupListeners() = binding.run {
         refreshLayout.setOnRefreshListener { viewModel.onRefresh() }
-        includeEmptyState.buttonSecondary.setOnClickListener { viewModel.onEmptyViewClicked() }
+        includeEmptyState.buttonEmpty.setOnClickListener { viewModel.onEmptyButtonClicked() }
         onMenuItem(toolbarHome, viewLifecycleOwner) { viewModel.onMenuClicked(idRes = it) }
     }
 

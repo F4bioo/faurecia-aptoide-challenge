@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.MaterialToolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_home"
         android:layout_width="0dp"
         android:layout_height="?actionBarSize"
@@ -21,7 +21,7 @@
             android:scaleType="centerCrop"
             android:src="@drawable/ds_illu_aptoide_logo" />
 
-    </com.google.android.material.appbar.MaterialToolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <ViewFlipper
         android:id="@+id/flipper_container"

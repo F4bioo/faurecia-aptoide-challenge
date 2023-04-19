@@ -4,17 +4,18 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.MenuProvider
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
+import com.airbnb.lottie.LottieAnimationView
 import com.fappslab.aptoide.features.home.R
 import com.fappslab.features.home.presentation.AboutFragment
 import com.fappslab.features.home.presentation.ErrorFragment
 import com.fappslab.features.home.presentation.HomeFragment
 import com.fappslab.libraries.design.dsmodal.build
 import com.fappslab.libraries.design.dsmodal.dsModalHost
-import com.google.android.material.appbar.MaterialToolbar
 
 private const val ERROR_TAG = "showErrorBottomSheet"
 private const val ABOUT_TAG = "showAboutBottomSheet"
@@ -45,7 +46,7 @@ internal fun HomeFragment.showAboutBottomSheet(
 }
 
 internal fun HomeFragment.onMenuItem(
-    toolbar: MaterialToolbar,
+    toolbar: Toolbar,
     lifecycleOwner: LifecycleOwner,
     selectedBlock: (Int) -> Unit
 ) {
@@ -67,4 +68,10 @@ internal fun HomeFragment.onMenuItem(
             addMenuProvider(menuProvider, lifecycleOwner, Lifecycle.State.RESUMED)
         }
     }
+}
+
+internal fun LottieAnimationView.animHandle(shouldAnimLottie: Boolean) {
+    if (shouldAnimLottie) {
+        resumeAnimation()
+    } else pauseAnimation()
 }

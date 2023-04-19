@@ -22,7 +22,7 @@ internal class HomeViewModel(
     private fun getApps() {
         getAppsUseCase()
             .schedulerOn(scheduler)
-            .doOnSubscribe { onState { it.copy(shouldShowRefreshing = true) } }
+            .doOnSubscribe { onState { it.onSubscribeState() } }
             .doAfterTerminate { onState { it.copy(shouldShowRefreshing = false) } }
             .subscribe(::getAppsSuccess, ::getAppsFailure)
             .disposableHandler()
@@ -34,7 +34,7 @@ internal class HomeViewModel(
 
     private fun getAppsFailure(cause: Throwable) {
         if (state.value.apps.isNullOrEmpty()) {
-            onState { it.copy(flipperChild = EMPTY_CHILD, emptyViewMessage = cause.message) }
+            onState { it.getAppsFailureState(cause) }
         } else onAction { HomeViewAction.Error(shouldShow = true, message = cause.message) }
     }
 
@@ -58,7 +58,7 @@ internal class HomeViewModel(
         onAction { HomeViewAction.About(shouldShow = false) }
     }
 
-    fun onEmptyViewClicked() {
+    fun onEmptyButtonClicked() {
         onState { it.copy(flipperChild = LOADING_CHILD) }
         getApps()
     }

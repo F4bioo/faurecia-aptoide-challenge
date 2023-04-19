@@ -59,7 +59,7 @@ internal class HomeViewModelTest {
     @Test
     fun `initFailure Should expose expected state When invoke init block`() {
         // Given
-        val expectedState = initialState.copy(flipperChild = EMPTY_CHILD)
+        val expectedState = initialState.copy(flipperChild = EMPTY_CHILD, shouldAnimLottie = true)
 
         // When
         setupSubject()
@@ -227,7 +227,7 @@ internal class HomeViewModelTest {
         setupSubject(with = ReturnsType.SUCCESS)
 
         // When
-        subject.onEmptyViewClicked()
+        subject.onEmptyButtonClicked()
 
         // Then
         runTest {
@@ -249,7 +249,7 @@ internal class HomeViewModelTest {
         every { getAppsUseCase() } returns Single.error(Throwable(message))
 
         // When
-        subject.onEmptyViewClicked()
+        subject.onEmptyButtonClicked()
 
         // Then
         runTest {
