@@ -25,3 +25,4 @@ jobs:
     needs: [lint]
     steps:
       - uses: ./.github/quality-checks/tests.yml
+
