@@ -1,0 +1,609 @@
+{
+  "status":"OK",
+  "responses":{
+    "listApps":{
+      "info":{
+        "status":"OK",
+        "time":{
+          "seconds":0.10092282295227051,
+          "human":"101 milliseconds"
+        }
+      },
+      "datasets":{
+        "all":{
+          "info":{
+            "status":"OK",
+            "time":{
+              "seconds":0.09905600547790527,
+              "human":"99 milliseconds"
+            }
+          },
+          "data":{
+            "total":689123,
+            "offset":0,
+            "limit":25,
+            "next":29,
+            "hidden":0,
+            "list":[
+              {
+                "id":50346401,
+                "name":"Toilet Time - Boredom killer games to play",
+                "package":"br.com.tapps.toilettime",
+                "store_id":1207749,
+                "store_name":"premiumapp",
+                "vername":"2.8.1",
+                "vercode":2332,
+                "md5sum":"707deb00f26b35b024d89e018b14931e",
+                "apk_tags":[
+
+                ],
+                "size":83672391,
+                "downloads":171760,
+                "pdownloads":171760,
+                "added":"2013-12-05 20:50:06",
+                "modified":"2020-02-20 16:38:29",
+                "updated":"2023-04-18 23:20:02",
+                "rating":0,
+                "icon":"https://pool.img.aptoide.com/premiumapp/4841cde3fa06ee873498966bc8b55931_icon.png",
+                "graphic":"https://pool.img.aptoide.com/premiumapp/f58ee5c07e551263d055178e81e997cf.png",
+                "uptype":"aptbackup"
+              },
+              {
+                "id":48984598,
+                "name":"Paytm Money - Mutual Funds / SIP Investment App",
+                "package":"com.paytmmoney",
+                "store_id":1207749,
+                "store_name":"premiumapp",
+                "vername":"3.3.1111",
+                "vercode":111,
+                "md5sum":"5afe8a3567e7bf98d1e6927da3655dd8",
+                "apk_tags":[
+
+                ],
+                "size":13971928,
+                "downloads":106615,
+                "pdownloads":106615,
+                "added":"2018-09-04 21:36:34",
+                "modified":"2019-11-19 04:23:32",
+                "updated":"2023-04-18 23:19:33",
+                "rating":2,
+                "icon":"https://pool.img.aptoide.com/premiumapp/52a0a2df5a3e395397003f075b06bdd7_icon.png",
+                "graphic":null,
+                "uptype":"aptbackup"
+              },
+              {
+                "id":64807076,
+                "name":"REDBOX: Rent, Stream, Buy New Movies, Free Live TV",
+                "package":"com.redbox.android.activity",
+                "store_id":2899481,
+                "store_name":"appupdater",
+                "vername":"9.139.0",
+                "vercode":5004343,
+                "md5sum":"77fbb755e3e7a65d3f6f556d836bf892",
+                "apk_tags":[
+
+                ],
+                "size":21859970,
+                "downloads":52432,
+                "pdownloads":52432,
+                "added":"2011-07-09 02:01:17",
+                "modified":"2023-04-18 23:18:14",
+                "updated":"2023-04-18 23:18:15",
+                "rating":0,
+                "icon":"https://pool.img.aptoide.com/appupdater/fef4ea9608a7a92976aa7a75652614a3_icon.png",
+                "graphic":"https://pool.img.aptoide.com/appupdater/ce706c6ba7e00062f565d44468b3a8d7_fgraphic.jpg",
+                "uptype":"webservice"
+              },
+              {
+                "id":60451632,
+                "name":"Ancestry: Explore your family tree & genealogy",
+                "package":"com.ancestry.android.apps.ancestry",
+                "store_id":2474719,
+                "store_name":"rickynumber18",
+                "vername":"13.21.1",
+                "vercode":326,
+                "md5sum":"bf07f52e2b15e2694068eb062f6d416d",
+                "apk_tags":[
+
+                ],
+                "size":115921323,
+                "downloads":32155,
+                "pdownloads":32155,
+                "added":"2012-01-28 10:24:48",
+                "modified":"2021-11-09 06:01:37",
+                "updated":"2023-04-18 23:17:44",
+                "rating":5,
+                "icon":"https://pool.img.aptoide.com/rickynumber18/f690a3b5ae2f45e91087e16d0397004e_icon.png",
+                "graphic":"https://pool.img.aptoide.com/rickynumber18/7db88e7b8cb164c874ae0df48504e22e_fgraphic.png",
+                "uptype":"aptuploader"
+              },
+              {
+                "id":64807071,
+                "name":"云闪付",
+                "package":"com.unionpay",
+                "store_id":2899481,
+                "store_name":"appupdater",
+                "vername":"9.3.2",
+                "vercode":3061,
+                "md5sum":"6144d584b3ffcdc01bea27c1e1775874",
+                "apk_tags":[
+
+                ],
+                "size":83902086,
+                "downloads":14326,
+                "pdownloads":14326,
+                "added":"2012-04-18 13:29:51",
+                "modified":"2023-04-18 23:17:05",
+                "updated":"2023-04-18 23:17:05",
+                "rating":0,
+                "icon":"https://pool.img.aptoide.com/appupdater/2a3a5da257867deebcf778a9c4bf82cc_icon.png",
+                "graphic":"https://pool.img.aptoide.com/appupdater/feb9cdd71f3bb4b2505ce50b8d169196_fgraphic.jpg",
+                "uptype":"webservice"
+              },
+              {
+                "id":64807068,
+                "name":"Baby Bunny - My Talking Pet",
+                "package":"com.cocoplay.cocobunny",
+                "store_id":2899481,
+                "store_name":"appupdater",
+                "vername":"1.1.6",
+                "vercode":116,
+                "md5sum":"a35672e1654182bff9a199c897c35bd5",
+                "apk_tags":[
+
+                ],
+                "size":99802921,
+                "downloads":9815,
+                "pdownloads":9815,
+                "added":"2015-11-13 08:34:27",
+                "modified":"2023-04-18 23:16:15",
+                "updated":"2023-04-18 23:16:16",
+                "rating":0,
+                "icon":"https://pool.img.aptoide.com/appupdater/8117504641ae69962584e37dbb1d31f6_icon.png",
+                "graphic":"https://pool.img.aptoide.com/appupdater/b0553ae554b8198c7bcfa56bd49f7099_fgraphic.jpg",
+                "uptype":"webservice"
+              },
+              {
+                "id":33623427,
+                "name":"My Boo Town - City Builder",
+                "package":"br.com.tapps.mybootown",
+                "store_id":15,
+                "store_name":"apps",
+                "vername":"1.12.2",
+                "vercode":142,
+                "md5sum":"fd07f2e0587d227eb1c597cd962670fd",
+                "apk_tags":[
+
+                ],
+                "size":85070328,
+                "downloads":31397,
+                "pdownloads":31397,
+                "added":"2016-07-06 16:37:06",
+                "modified":"2017-12-03 06:06:58",
+                "updated":"2023-04-18 23:16:04",
+                "rating":4.54,
+                "icon":"https://pool.img.aptoide.com/apps/d42cfbae92c57c88c93fafca2ba3899f_icon.png",
+                "graphic":null,
+                "uptype":"webservice"
+              },
+              {
+                "id":64807062,
+                "name":"Kaspersky Internet Security",
+                "package":"com.kms.me",
+                "store_id":2899481,
+                "store_name":"appupdater",
+                "vername":"11.78.60.276",
+                "vercode":6105,
+                "md5sum":"b28b5c9ddd80b7cdbf29c42de64a2a2b",
+                "apk_tags":[
+
+                ],
+                "size":52204465,
+                "downloads":5256,
+                "pdownloads":5256,
+                "added":"2018-07-05 05:19:47",
+                "modified":"2023-04-18 23:15:38",
+                "updated":"2023-04-18 23:15:38",
+                "rating":0,
+                "icon":"https://pool.img.aptoide.com/appupdater/6fd21f47acdf115b7cf376ad12a4b7e6_icon.png",
+                "graphic":"https://pool.img.aptoide.com/appupdater/e3079e46a45da8c21c3a9f6f12e86891_fgraphic.jpg",
+                "uptype":"webservice"
+              },
+              {
+                "id":64807060,
+                "name":"Map & SNS Navi. Golden Rooster",
+                "package":"com.DrowsyDrivingAlert",
+                "store_id":2899481,
+                "store_name":"appupdater",
+                "vername":"17.01.02",
+                "vercode":165,
+                "md5sum":"d6ea416fde03787f85cb7bf0fd48b641",
+                "apk_tags":[
+
+                ],
+                "size":33043119,
+                "downloads":143,
+                "pdownloads":143,
+                "added":"2020-02-06 02:45:55",
+                "modified":"2023-04-18 23:14:26",
+                "updated":"2023-04-18 23:14:27",
+                "rating":0,
+                "icon":"https://pool.img.aptoide.com/appupdater/51dbec21f60004f352c2a60dc67b1ff3_icon.png",
+                "graphic":"https://pool.img.aptoide.com/appupdater/02d95fbabbd8300fc77e406ddba9b3c1_fgraphic.png",
+                "uptype":"webservice"
+              },
+              {
+                "id":64807058,
+                "name":"Shwan Dictionary",
+                "package":"com.shwan.abdulrahman.shwandictionary",
+                "store_id":2899481,
+                "store_name":"appupdater",
+                "vername":"7.4.23 kdl",
+                "vercode":16,
+                "md5sum":"19b02049d357368119ad209f1d4080ef",
+                "apk_tags":[
+
+                ],
+                "size":26441188,
+                "downloads":931,
+                "pdownloads":931,
+                "added":"2016-12-20 18:45:49",
+                "modified":"2023-04-18 23:13:26",
+                "updated":"2023-04-18 23:13:26",
+                "rating":0,
+                "icon":"https://pool.img.aptoide.com/appupdater/76662e545d20e3da78cd1438793af5f5_icon.png",
+                "graphic":"https://pool.img.aptoide.com/appupdater/6aeba6bde45446721be3c8264c19dbe2_fgraphic.png",
+                "uptype":"webservice"
+              },
+              {
+                "id":58169924,
+                "name":"Body Editor - Body Shape Editor, Slim Face & Body",
+                "package":"breastenlarger.bodyeditor.photoeditor",
+                "store_id":3171258,
+                "store_name":"kittycatliver1",
+                "vername":"1.175.29",
+                "vercode":29,
+                "md5sum":"6ac7c4d76dd0c4056c5f10a09f7e8780",
+                "apk_tags":[
+
+                ],
+                "size":16426875,
+                "downloads":61121,
+                "pdownloads":61121,
+                "added":"2017-12-31 22:51:00",
+                "modified":"2021-05-27 18:05:03",
+                "updated":"2023-04-18 23:11:01",
+                "rating":0,
+                "icon":"https://pool.img.aptoide.com/kittycatliver1/afa41c7dbceeed5b9ac0e5b9a8ee4b3e_icon.png",
+                "graphic":"https://pool.img.aptoide.com/kittycatliver1/fc43564ff4a5c1991ea9a225d87cd78b.png",
+                "uptype":"aptuploader"
+              },
+              {
+                "id":64807051,
+                "name":"Instagram",
+                "package":"com.instagram.android",
+                "store_id":65518,
+                "store_name":"mark8",
+                "vername":"280.0.0.0.89",
+                "vercode":368005573,
+                "md5sum":"d59ea9ec9e68e564ba286504b08afb77",
+                "apk_tags":[
+                  "input.pointer"
+                ],
+                "size":50616995,
+                "downloads":114848832,
+                "pdownloads":114848832,
+                "added":"2012-04-09 17:54:13",
+                "modified":"2023-04-18 23:07:04",
+                "updated":"2023-04-18 23:07:06",
+                "rating":4.25,
+                "icon":"https://pool.img.aptoide.com/mark8/3c0b5296e29c391d50a7580b3e949a34_icon.png",
+                "graphic":"https://pool.img.aptoide.com/mark8/3aef259315e6bdcc3c538cccd2ccfc1d_fgraphic.jpg",
+                "uptype":"aptuploader"
+              },
+              {
+                "id":52216503,
+                "name":"CPU Cooler - Cooler master, Phone Cleaner, Booster",
+                "package":"cm.clean.master.cleaner.booster.cpu.cooler",
+                "store_id":2732831,
+                "store_name":"goy1",
+                "vername":"1.5.9",
+                "vercode":59,
+                "md5sum":"0a10d5f135560a1e7d5bdbf2c1fd4105",
+                "apk_tags":[
+
+                ],
+                "size":9922822,
+                "downloads":37800,
+                "pdownloads":37800,
+                "added":"2017-10-22 22:26:42",
+                "modified":"2020-06-30 04:28:18",
+                "updated":"2023-04-18 23:06:30",
+                "rating":0,
+                "icon":"https://pool.img.aptoide.com/goy1/076df3ea4f54b7d5c4bda0f08913c694_icon.png",
+                "graphic":"https://pool.img.aptoide.com/goy1/3ba2f74a3f1c842d942cddf9e49b38aa.png",
+                "uptype":"aptuploader"
+              },
+              {
+                "id":33851753,
+                "name":"Mine Quest 2 - Mining RPG",
+                "package":"br.com.tapps.minequest2",
+                "store_id":1463817,
+                "store_name":"india-market",
+                "vername":"2.2.1",
+                "vercode":138,
+                "md5sum":"8ee691ccb747337ef8c98f42f9a59c03",
+                "apk_tags":[
+
+                ],
+                "size":85649377,
+                "downloads":31542,
+                "pdownloads":31542,
+                "added":"2016-05-06 18:59:07",
+                "modified":"2020-02-15 17:09:19",
+                "updated":"2023-04-18 23:04:04",
+                "rating":0,
+                "icon":"https://pool.img.aptoide.com/india-market/74b440f2e0a9bb47e0124e702b861381_icon.png",
+                "graphic":"https://pool.img.aptoide.com/india-market/0b6ac013f893b5340140c37a361f05f7_fgraphic_705x345.png",
+                "uptype":"aptbackup"
+              },
+              {
+                "id":60457710,
+                "name":"쿠팡 (Coupang)",
+                "package":"com.coupang.mobile",
+                "store_id":2899481,
+                "store_name":"appupdater",
+                "vername":"6.8.8",
+                "vercode":210303,
+                "md5sum":"8d8403c5df275ab335a6ad2358efd605",
+                "apk_tags":[
+
+                ],
+                "size":77589243,
+                "downloads":10268,
+                "pdownloads":10268,
+                "added":"2013-04-17 06:25:37",
+                "modified":"2021-11-09 09:09:28",
+                "updated":"2023-04-18 23:03:36",
+                "rating":0,
+                "icon":"https://pool.img.aptoide.com/appupdater/e17e142688e379ae862f4e6a8c9579a0_icon.png",
+                "graphic":"https://pool.img.aptoide.com/appupdater/e5a0308ac85e074c81fa365dcffbef79_fgraphic.png",
+                "uptype":"webservice"
+              },
+              {
+                "id":56789425,
+                "name":"StudySmarter: The Study App For School & Uni",
+                "package":"com.studysmarter",
+                "store_id":2899481,
+                "store_name":"appupdater",
+                "vername":"5.2.1",
+                "vercode":5020101,
+                "md5sum":"0690d3b916d602d3a421d0e0cd0fd421",
+                "apk_tags":[
+
+                ],
+                "size":46280772,
+                "downloads":13097,
+                "pdownloads":13097,
+                "added":"2019-09-01 13:24:44",
+                "modified":"2021-03-20 15:42:24",
+                "updated":"2023-04-18 23:03:34",
+                "rating":0,
+                "icon":"https://pool.img.aptoide.com/appupdater/7a40a38976a95835de52646b9bb4808b_icon.png",
+                "graphic":"https://pool.img.aptoide.com/appupdater/7193de4478ee06e9a0ff6235662fbf93.png",
+                "uptype":"webservice"
+              },
+              {
+                "id":64807035,
+                "name":"Clash of Beasts: Tower Defense",
+                "package":"com.ubisoft.clash.of.war.strategy.rpg.pvp.raid",
+                "store_id":2899481,
+                "store_name":"appupdater",
+                "vername":"6.5.1",
+                "vercode":206501,
+                "md5sum":"4f29e7b3ec1b852dc07bdf23b8d508c1",
+                "apk_tags":[
+
+                ],
+                "size":1395149093,
+                "downloads":1019,
+                "pdownloads":1019,
+                "added":"2021-10-29 11:42:18",
+                "modified":"2023-04-18 23:03:20",
+                "updated":"2023-04-18 23:03:21",
+                "rating":0,
+                "icon":"https://pool.img.aptoide.com/appupdater/e5520999c42e64ff6f2e6385cd6d0f6b_icon.png",
+                "graphic":"https://pool.img.aptoide.com/appupdater/5a783a613f8c2d4301271ed7285652eb_fgraphic.jpg",
+                "uptype":"webservice"
+              },
+              {
+                "id":51306201,
+                "name":"Yahoo! Mail - Free Email -",
+                "package":"jp.co.yahoo.android.ymail",
+                "store_id":2548622,
+                "store_name":"dynamaite",
+                "vername":"4.5.11",
+                "vercode":168,
+                "md5sum":"e8dae2737932e1454f1d331041b7904b",
+                "apk_tags":[
+
+                ],
+                "size":15451323,
+                "downloads":6207,
+                "pdownloads":6207,
+                "added":"2014-09-25 09:50:54",
+                "modified":"2020-04-15 14:43:07",
+                "updated":"2023-04-18 23:03:09",
+                "rating":0,
+                "icon":"https://pool.img.aptoide.com/dynamaite/bd5e5cbbdf8027fa8b5b95e35a2ac573_icon.png",
+                "graphic":"https://pool.img.aptoide.com/dynamaite/3271b97d4576113a50f38b59b1938d49.png",
+                "uptype":"aptuploader"
+              },
+              {
+                "id":62788605,
+                "name":"Money RAWR - The Rewards App",
+                "package":"online.moneyrawr.app",
+                "store_id":2899481,
+                "store_name":"appupdater",
+                "vername":"4.4.3-MoneyRawr",
+                "vercode":443,
+                "md5sum":"d411bae65e2fa999a5ea2fe7f20423d3",
+                "apk_tags":[
+
+                ],
+                "size":46157765,
+                "downloads":19196,
+                "pdownloads":19196,
+                "added":"2018-08-30 12:52:35",
+                "modified":"2022-07-11 21:24:18",
+                "updated":"2023-04-18 23:02:54",
+                "rating":5,
+                "icon":"https://pool.img.aptoide.com/appupdater/0a74526bbedff22f099741d7bd815a30_icon.png",
+                "graphic":"https://pool.img.aptoide.com/appupdater/ab5f7db24e32eef40add69e2530dec11_fgraphic.png",
+                "uptype":"webservice"
+              },
+              {
+                "id":64170470,
+                "name":"Wix Owner - Website Maker",
+                "package":"com.wix.admin",
+                "store_id":2560780,
+                "store_name":"rober18",
+                "vername":"2.71899.0",
+                "vercode":86429,
+                "md5sum":"702048468c47865f2972a5df7ce269f5",
+                "apk_tags":[
+
+                ],
+                "size":210367896,
+                "downloads":10420,
+                "pdownloads":10420,
+                "added":"2021-03-09 10:00:57",
+                "modified":"2023-01-20 17:45:11",
+                "updated":"2023-04-18 23:02:51",
+                "rating":0,
+                "icon":"https://pool.img.aptoide.com/rober18/e1c54e622358a2f04d5cc547b81650ca_icon.png",
+                "graphic":"https://pool.img.aptoide.com/rober18/7d1d87cc574ffd770a85d6393dd76cab_fgraphic.png",
+                "uptype":"aptuploader"
+              },
+              {
+                "id":61566865,
+                "name":"Dostavista — работа курьером",
+                "package":"com.sebbia.delivery",
+                "store_id":2899481,
+                "store_name":"appupdater",
+                "vername":"2.66.3",
+                "vercode":2544,
+                "md5sum":"ea8092936043aa1c4dbbaf8fce6db3fc",
+                "apk_tags":[
+
+                ],
+                "size":19183834,
+                "downloads":4689,
+                "pdownloads":4689,
+                "added":"2015-01-18 05:29:57",
+                "modified":"2022-01-31 18:06:55",
+                "updated":"2023-04-18 23:02:51",
+                "rating":0,
+                "icon":"https://pool.img.aptoide.com/appupdater/183e58e1f94215ccbd3aefc73f40c57b_icon.png",
+                "graphic":"https://pool.img.aptoide.com/appupdater/3f4e01015ebba0a2c336b9ed8b13b690_fgraphic.jpg",
+                "uptype":"webservice"
+              },
+              {
+                "id":49650058,
+                "name":"Australia Post",
+                "package":"au.com.auspost.android",
+                "store_id":1162604,
+                "store_name":"ozapps",
+                "vername":"6.1.0-",
+                "vercode":274,
+                "md5sum":"b6947917e45ce461a5fcfcdebe35cbf0",
+                "apk_tags":[
+
+                ],
+                "size":32695810,
+                "downloads":2328,
+                "pdownloads":2328,
+                "added":"2013-06-26 06:08:18",
+                "modified":"2020-01-04 03:33:51",
+                "updated":"2023-04-18 23:02:47",
+                "rating":0,
+                "icon":"https://pool.img.aptoide.com/ozapps/7d2a2699da31a5cf5e0a1f788f43d44d_icon.png",
+                "graphic":"https://pool.img.aptoide.com/ozapps/9be4dc035618558b1c0f87b657a9e28f.png",
+                "uptype":"aptuploader"
+              },
+              {
+                "id":64807015,
+                "name":"Lufthansa",
+                "package":"com.lufthansa.android.lufthansa",
+                "store_id":2899481,
+                "store_name":"appupdater",
+                "vername":"9.132.1+0",
+                "vercode":12906,
+                "md5sum":"a0e00c48683d4bb2e860b50dc1776892",
+                "apk_tags":[
+
+                ],
+                "size":80255203,
+                "downloads":10227,
+                "pdownloads":10227,
+                "added":"2012-09-17 10:56:04",
+                "modified":"2023-04-18 23:02:35",
+                "updated":"2023-04-18 23:02:36",
+                "rating":0,
+                "icon":"https://pool.img.aptoide.com/appupdater/ce545616c6bb6c2e3c9775fb807dc58b_icon.png",
+                "graphic":"https://pool.img.aptoide.com/appupdater/fbbc977e72290da4f041a298c585c1b0_fgraphic.jpg",
+                "uptype":"webservice"
+              },
+              {
+                "id":61009523,
+                "name":"Sportal (Sportal.bg)",
+                "package":"bg.sportal.android",
+                "store_id":2899481,
+                "store_name":"appupdater",
+                "vername":"6.1.0",
+                "vercode":250,
+                "md5sum":"83e4241072edcd649ba77c84106c30d7",
+                "apk_tags":[
+
+                ],
+                "size":12708381,
+                "downloads":2180,
+                "pdownloads":2180,
+                "added":"2012-09-29 22:21:35",
+                "modified":"2021-12-03 17:24:47",
+                "updated":"2023-03-30 08:43:50",
+                "rating":0,
+                "icon":"https://pool.img.aptoide.com/appupdater/898b3970bece887f4c3adb52ad03a8e6_icon.jpg",
+                "graphic":"https://pool.img.aptoide.com/appupdater/02189db55ecaf0f7f2a9d6d248cda211_fgraphic.jpg",
+                "uptype":"webservice"
+              },
+              {
+                "id":64807011,
+                "name":"Turismocity Vuelos Baratos",
+                "package":"com.grupodc.turismocity",
+                "store_id":2899481,
+                "store_name":"appupdater",
+                "vername":"14.0.54",
+                "vercode":7497754,
+                "md5sum":"c782d9e55a8fe9991b148140417c298a",
+                "apk_tags":[
+
+                ],
+                "size":85331384,
+                "downloads":2652,
+                "pdownloads":2652,
+                "added":"2016-02-17 21:21:08",
+                "modified":"2023-04-18 23:02:34",
+                "updated":"2023-04-18 23:02:34",
+                "rating":0,
+                "icon":"https://pool.img.aptoide.com/appupdater/161d427951a7f02185eb0d886d482958_icon.png",
+                "graphic":"https://pool.img.aptoide.com/appupdater/33a62a732f4b420f533f6f972f940e26_fgraphic.jpg",
+                "uptype":"webservice"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
