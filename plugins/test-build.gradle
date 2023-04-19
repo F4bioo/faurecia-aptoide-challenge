@@ -4,6 +4,7 @@ dependencies {
     implementation(TestLibs.kotlinJUnitTest)
     implementation(TestLibs.turbineTest)
     implementation(TestLibs.espressoCoreTest)
+    implementation(TestLibs.espressoContribTest)
     implementation(TestLibs.fragmentTest)
     implementation(TestLibs.koinCoreTest)
     implementation(TestLibs.kotlinCoroutinesTest )
@@ -23,6 +24,7 @@ dependencies {
 
     androidTestImplementation(TestLibs.extJunitTest)
     androidTestImplementation(TestLibs.espressoCoreTest)
+    androidTestImplementation(TestLibs.espressoContribTest)
     androidTestImplementation(TestLibs.koinTest)
     androidTestImplementation(TestLibs.koinCoreTest)
     androidTestImplementation(TestLibs.mockkAndroidTest)
@@ -30,4 +32,7 @@ dependencies {
     androidTestImplementation(TestLibs.arcCoreTest)
     androidTestImplementation(TestLibs.extJunitKtxTest)
     androidTestImplementation(TestLibs.okhttpTest)
+
+    // Modules
+    androidTestImplementation project(Modules.design)
 }

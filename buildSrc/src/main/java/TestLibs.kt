@@ -14,6 +14,7 @@ object TestLibs {
     // Android
     const val runnerTest = "androidx.test:runner:${Versions.testRules_version}"
     const val espressoCoreTest = "androidx.test.espresso:espresso-core:${Versions.espresso_version}"
+    const val espressoContribTest = "androidx.test.espresso:espresso-contrib:${Versions.espresso_version}"
     const val extJunitTest = "androidx.test.ext:junit:${Versions.androidxJunit_version}"
     const val extJunitKtxTest = "androidx.test.ext:junit-ktx:${Versions.androidxJunit_version}"
     const val fragmentTest = "androidx.fragment:fragment-testing:${Versions.fragment_version}"
