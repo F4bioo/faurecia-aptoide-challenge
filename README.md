@@ -60,3 +60,4 @@ This project was built with Android Android Studio Electric Eel | 2022.1.1,
 ## Screens
 <img src="images/theme_light_mode.png" width="100%"/>
 <img src="images/theme_dark_mode.png" width="100%"/>
+
