@@ -45,7 +45,7 @@ internal class HomeFragment : Fragment(R.layout.home_fragment) {
             displayedChildState(state.flipperChild)
             refreshLayoutState(state.shouldShowRefreshing)
             emptyViewMessageState(state.emptyViewMessage)
-            animHandleState(state.shouldAnimLottie)
+            lottieAnimHandleState(state.shouldAnimLottie)
         }
 
         onViewAction(viewModel) { action ->
@@ -69,8 +69,8 @@ internal class HomeFragment : Fragment(R.layout.home_fragment) {
         binding.includeEmptyState.textEmptyMessage.text = message
     }
 
-    private fun animHandleState(shouldAnimLottie: Boolean) {
-        binding.includeEmptyState.lottieAnim.animHandle(shouldAnimLottie)
+    private fun lottieAnimHandleState(shouldAnim: Boolean) {
+        binding.includeEmptyState.lottieAnim.animHandle(shouldAnim)
     }
 
     private fun setupListeners() = binding.run {

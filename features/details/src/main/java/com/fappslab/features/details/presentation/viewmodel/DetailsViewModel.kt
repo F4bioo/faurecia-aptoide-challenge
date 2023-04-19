@@ -20,13 +20,14 @@ internal class DetailsViewModel(
     private fun getApp() {
         getAppUseCase(packageName)
             .schedulerOn(scheduler)
-            .doOnSubscribe { onState { it.copy(flipperChild = LOADING_CHILD) } }
+            .doOnSubscribe { onState { it.onSubscribeState() } }
+            .doFinally { onState { it.copy(shouldAnimShimmer = false) } }
             .subscribe(::getAppSuccess, ::getAppFailure)
             .disposableHandler()
     }
 
     private fun getAppSuccess(app: App) {
-        onState { it.getAppState(app) }
+        onState { it.getAppSuccessState(app) }
     }
 
     private fun getAppFailure(cause: Throwable) {

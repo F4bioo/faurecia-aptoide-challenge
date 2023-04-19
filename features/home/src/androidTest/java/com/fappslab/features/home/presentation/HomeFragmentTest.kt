@@ -46,11 +46,11 @@ internal class HomeFragmentTest {
             .thenCheck { checkSuccessScreenIsDisplayed() }
             .thenCheck { checkToolbarHasExactlyBackgroundColor() }
             .thenCheck { checkEditorsTitleHasExactlyText() }
-            .thenCheck { checkRecyclerEditorsViewIsPopulated() }
+            .thenCheck { checkRecyclerViewEditorsIsPopulated() }
             .thenCheck { checkTopsTitleHasExactlyText() }
-            .thenCheck { checkRecyclerTopsViewIsPopulated() }
+            .thenCheck { checkRecyclerViewTopsIsPopulated() }
             .thenCheck { checkTrendingHasExactlyText() }
-            .thenCheck { checkRecyclerTrendingViewIsPopulated() }
+            .thenCheck { checkRecyclerViewTrendingIsPopulated() }
     }
 
     @Test
