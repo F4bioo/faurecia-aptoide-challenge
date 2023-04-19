@@ -70,8 +70,8 @@ internal fun HomeFragment.onMenuItem(
     }
 }
 
-internal fun LottieAnimationView.animHandle(shouldAnimLottie: Boolean) {
-    if (shouldAnimLottie) {
+internal fun LottieAnimationView.animHandle(shouldAnim: Boolean) {
+    if (shouldAnim) {
         resumeAnimation()
     } else pauseAnimation()
 }

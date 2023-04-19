@@ -1,5 +1,7 @@
 package com.fappslab.libraries.arch.testing.robot.assertions
 
+import android.view.View
+import android.widget.TextView
 import android.widget.ViewFlipper
 import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
@@ -12,15 +14,22 @@ import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.contrib.RecyclerViewActions
 import androidx.test.espresso.matcher.ViewMatchers
+import androidx.test.espresso.matcher.ViewMatchers.isAssignableFrom
 import com.fappslab.libraries.arch.testing.robot.assertions.ViewMatchers.endIconTextInputLayoutClicked
+import com.fappslab.libraries.arch.testing.robot.assertions.ViewMatchers.hasAnyLayoutBackground
+import com.fappslab.libraries.arch.testing.robot.assertions.ViewMatchers.hasLayoutBackground
 import com.fappslab.libraries.arch.testing.robot.assertions.ViewMatchers.recyclerViewItemCount
 import com.fappslab.libraries.arch.testing.robot.assertions.ViewMatchers.withChipViewBackground
 import com.fappslab.libraries.arch.testing.robot.assertions.ViewMatchers.withEndIcon
+import com.fappslab.libraries.arch.testing.robot.assertions.ViewMatchers.withShapeableImageViewHasDrawable
 import com.fappslab.libraries.arch.testing.robot.assertions.ViewMatchers.withShapeableImageViewStrokeColor
 import com.fappslab.libraries.arch.testing.robot.assertions.ViewMatchers.withViewBackground
+import com.fappslab.libraries.arch.testing.robot.assertions.custommatchers.withDrawable
 import junit.framework.AssertionFailedError
 import org.hamcrest.CoreMatchers
+import org.hamcrest.Matcher
 import org.hamcrest.Matchers
+import org.hamcrest.core.StringContains
 import kotlin.test.assertEquals
 
 @Suppress("TooManyFunctions")
@@ -52,6 +61,43 @@ object ViewAssertions {
             .check(ViewAssertions.matches(withEndIcon(iconRes)))
     }
 
+    fun checkImageViewHasDrawable(
+        @IdRes resId: Int,
+        @DrawableRes drawableRes: Int,
+        @ColorRes colorRes: Int? = null
+    ) {
+        Espresso.onView(ViewMatchers.withId(resId))
+            .check(ViewAssertions.matches(withDrawable(drawableRes, colorRes)))
+    }
+
+    fun checkShapeableImageViewHasDrawable(@IdRes resId: Int) {
+        Espresso.onView(ViewMatchers.withId(resId))
+            .check(ViewAssertions.matches(withShapeableImageViewHasDrawable()))
+    }
+
+    fun checkViewGroupHasExactlyBackgroundColor(
+        @IdRes resId: Int,
+        @ColorRes expectedColorRes: Int
+    ) {
+        Espresso.onView(ViewMatchers.withId(resId))
+            .check(ViewAssertions.matches(hasLayoutBackground(expectedColorRes)))
+    }
+
+    fun checkViewGroupHasAnyBackgroundColor(@IdRes resId: Int) {
+        Espresso.onView(ViewMatchers.withId(resId))
+            .check(ViewAssertions.matches(hasAnyLayoutBackground()))
+    }
+
+
+    fun withTextContaining(substring: String): Matcher<View> {
+        return CoreMatchers.allOf(
+            ViewMatchers.withText(
+                StringContains.containsString(substring)
+            ),
+            isAssignableFrom(TextView::class.java)
+        )
+    }
+
     fun checkEndIconTextInputLayoutIsClicked(@IdRes resId1: Int, @IdRes resId2: Int) {
         Espresso.onView(ViewMatchers.withId(resId1))
             .perform(endIconTextInputLayoutClicked(resId2))
@@ -80,6 +126,11 @@ object ViewAssertions {
     fun checkTextViewHasExactlyString(@IdRes resId: Int, expectedString: String) {
         Espresso.onView(ViewMatchers.withId(resId))
             .check(ViewAssertions.matches(ViewMatchers.withText(expectedString)))
+    }
+
+    fun checkTextViewHasExactlyStringWithNewLine(@IdRes resId: Int, expectedString: String) {
+        Espresso.onView(ViewMatchers.withId(resId))
+            .check(ViewAssertions.matches(withTextContaining(expectedString)))
     }
 
     fun checkTextViewHasExactlyStringRes(@IdRes resId: Int, @StringRes expectedStringRes: Int) {

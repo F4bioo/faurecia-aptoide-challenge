@@ -2,12 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/details_header_root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/ds_highlight_medium"
     android:padding="@dimen/ds_size_04">
 
-    <ImageButton
+    <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/button_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -15,16 +16,16 @@
         android:contentDescription="@string/common_back"
         android:padding="@dimen/ds_size_02"
         android:src="@drawable/ds_ic_arrow_back"
-        app:layout_constraintBottom_toBottomOf="@+id/image_avatar"
-        app:layout_constraintEnd_toStartOf="@id/image_avatar"
+        app:layout_constraintBottom_toBottomOf="@+id/image_details_avatar"
+        app:layout_constraintEnd_toStartOf="@id/image_details_avatar"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/image_avatar"
+        app:layout_constraintTop_toTopOf="@+id/image_details_avatar"
         app:layout_constraintVertical_bias="0"
         app:tint="@color/ds_gray_light" />
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/image_avatar"
+        android:id="@+id/image_details_avatar"
         android:layout_width="@dimen/ds_size_20"
         android:layout_height="@dimen/ds_size_20"
         android:layout_marginTop="@dimen/ds_size_06"
@@ -47,7 +48,7 @@
         app:layout_constraintBottom_toTopOf="@id/text_rank"
         app:layout_constraintEnd_toEndOf="@id/text_rank"
         app:layout_constraintStart_toStartOf="@id/text_rank"
-        app:layout_constraintTop_toTopOf="@+id/image_avatar"
+        app:layout_constraintTop_toTopOf="@+id/image_details_avatar"
         app:layout_constraintVertical_bias="1"
         tools:tint="@color/ds_green" />
 
@@ -59,10 +60,10 @@
         android:layout_marginStart="@dimen/ds_size_04"
         android:textAllCaps="true"
         android:textSize="@dimen/ds_text_size_01"
-        app:layout_constraintBottom_toBottomOf="@id/image_avatar"
+        app:layout_constraintBottom_toBottomOf="@id/image_details_avatar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@id/image_avatar"
+        app:layout_constraintStart_toEndOf="@id/image_details_avatar"
         tools:text="Trusted" />
 
     <TextView
@@ -74,7 +75,7 @@
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/image_avatar"
+        app:layout_constraintTop_toBottomOf="@id/image_details_avatar"
         tools:text="@tools:sample/lorem" />
 
     <androidx.constraintlayout.helper.widget.Flow

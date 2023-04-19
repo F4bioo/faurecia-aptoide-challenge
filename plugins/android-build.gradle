@@ -2,7 +2,6 @@ apply plugin: 'kotlin-parcelize'
 
 apply from: "$rootDir/plugins/config-build.gradle"
 apply from: "$rootDir/plugins/test-build.gradle"
-apply from: "$rootDir/plugins/jacoco-build.gradle"
 
 android {
     defaultConfig {

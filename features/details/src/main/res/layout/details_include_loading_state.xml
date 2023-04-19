@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/shimmer_anim"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:shimmer_auto_start="true"
+    app:shimmer_auto_start="false"
     app:shimmer_direction="left_to_right"
     app:shimmer_duration="1000"
     app:shimmer_repeat_delay="1000">

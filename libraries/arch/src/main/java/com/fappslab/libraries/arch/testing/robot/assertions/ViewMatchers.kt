@@ -2,11 +2,13 @@ package com.fappslab.libraries.arch.testing.robot.assertions
 
 import android.graphics.drawable.ColorDrawable
 import android.view.View
+import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
 import androidx.annotation.IdRes
 import androidx.annotation.VisibleForTesting
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.toBitmap
 import androidx.recyclerview.widget.RecyclerView
@@ -138,6 +140,44 @@ object ViewMatchers {
 
             override fun matchesSafely(view: RecyclerView): Boolean {
                 return matcher.matches(view.adapter?.itemCount)
+            }
+        }
+    }
+
+    internal fun withShapeableImageViewHasDrawable(): BoundedMatcher<View, ShapeableImageView> {
+        return object : BoundedMatcher<View, ShapeableImageView>(ShapeableImageView::class.java) {
+            override fun describeTo(description: Description?) {
+                description?.appendText("has any drawable")
+            }
+
+            override fun matchesSafely(item: ShapeableImageView): Boolean {
+                return item.drawable != null
+            }
+        }
+    }
+
+    internal fun hasAnyLayoutBackground(): Matcher<View> {
+        return object : BoundedMatcher<View, ViewGroup>(ViewGroup::class.java) {
+            override fun describeTo(description: Description) {
+                description.appendText("has any background")
+            }
+
+            override fun matchesSafely(viewGroup: ViewGroup): Boolean {
+                return viewGroup.background != null
+            }
+        }
+    }
+
+    fun hasLayoutBackground(@ColorRes colorRes: Int): Matcher<View> {
+        return object : BoundedMatcher<View, ConstraintLayout>(ConstraintLayout::class.java) {
+            override fun describeTo(description: Description) {
+                description.appendText("with background color: $colorRes")
+            }
+
+            override fun matchesSafely(viewGroup: ConstraintLayout): Boolean {
+                val expectedColor = ContextCompat.getColor(viewGroup.context, colorRes)
+                val currentColor = (viewGroup.background as? ColorDrawable)?.color
+                return currentColor == expectedColor
             }
         }
     }

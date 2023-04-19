@@ -10,6 +10,7 @@ import com.fappslab.aptoide.features.details.R
 import com.fappslab.aptoide.features.details.databinding.DetailsActivityBinding
 import com.fappslab.features.details.domain.model.App
 import com.fappslab.features.details.presentation.adapter.ScreenshotsAdapter
+import com.fappslab.features.details.presentation.extension.animHandle
 import com.fappslab.features.details.presentation.model.DetailsArgs
 import com.fappslab.features.details.presentation.viewmodel.DetailsViewAction
 import com.fappslab.features.details.presentation.viewmodel.DetailsViewModel
@@ -52,6 +53,8 @@ internal class DetailsActivity : AppCompatActivity() {
             submitListState(state.screenshots)
             displayedChildState(state.flipperChild)
             errorMessageState(state.errorMessage)
+            shimmerAnimHandleState(state.shouldAnimShimmer)
+            lottieAnimHandleState(state.shouldAnimLottie)
         }
 
         onViewAction(viewModel) { action ->
@@ -60,6 +63,18 @@ internal class DetailsActivity : AppCompatActivity() {
                 DetailsViewAction.FinishView -> finish()
             }
         }
+    }
+
+    private fun setupListeners() = binding.run {
+        includeHeader.buttonBack.setOnClickListener { viewModel.onBack() }
+        includeHeader.buttonDownload.setOnClickListener { viewModel.onDownload() }
+        includeEmptyState.buttonPrimary.setOnClickListener { viewModel.onTryAgain() }
+        includeEmptyState.buttonSecondary.setOnClickListener { viewModel.onBack() }
+    }
+
+    private fun setupRecycler() = binding.run {
+        recyclerScreenshots.adapter = adapterScreenshots
+        recyclerScreenshots.itemAnimator = null
     }
 
     private fun errorMessageState(errorMessage: String?) {
@@ -75,7 +90,7 @@ internal class DetailsActivity : AppCompatActivity() {
 
     private fun App.headerState(@ColorRes rankColor: Int) {
         binding.includeHeader.let {
-            it.imageAvatar.loadImage(icon)
+            it.imageDetailsAvatar.loadImage(icon)
             it.imageRank.setTint(rankColor)
             it.textRank.text = apk.malware.rank
             it.textTile.text = name
@@ -103,16 +118,12 @@ internal class DetailsActivity : AppCompatActivity() {
         binding.flipperContainer.displayedChild = flipperChild
     }
 
-    private fun setupListeners() = binding.run {
-        includeHeader.buttonBack.setOnClickListener { viewModel.onBack() }
-        includeHeader.buttonDownload.setOnClickListener { viewModel.onDownload() }
-        includeEmptyState.buttonPrimary.setOnClickListener { viewModel.onTryAgain() }
-        includeEmptyState.buttonSecondary.setOnClickListener { viewModel.onBack() }
+    private fun shimmerAnimHandleState(shouldAnim: Boolean) {
+        binding.includeLoadingState.shimmerAnim.animHandle(shouldAnim)
     }
 
-    private fun setupRecycler() = binding.run {
-        recyclerScreenshots.adapter = adapterScreenshots
-        recyclerScreenshots.itemAnimator = null
+    private fun lottieAnimHandleState(shouldAnim: Boolean) {
+        binding.includeEmptyState.lottieAnimDetailsEmpty.animHandle(shouldAnim)
     }
 
     private fun downloadAction(action: DetailsViewAction.Download) {

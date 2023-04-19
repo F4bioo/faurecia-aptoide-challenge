@@ -10,6 +10,8 @@ internal const val LOADING_CHILD = 1
 internal const val EMPTY_CHILD = 2
 
 internal data class DetailsViewState(
+    val shouldAnimShimmer: Boolean = false,
+    val shouldAnimLottie: Boolean = false,
     val flipperChild: Int = LOADING_CHILD,
     val screenshots: List<String>? = null,
     val errorMessage: String? = null,
@@ -17,7 +19,12 @@ internal data class DetailsViewState(
     @ColorRes val rankColor: Int = DS.color.ds_green
 ) {
 
-    fun getAppState(app: App) = copy(
+    fun onSubscribeState() = copy(
+        shouldAnimShimmer = true,
+        flipperChild = LOADING_CHILD
+    )
+
+    fun getAppSuccessState(app: App) = copy(
         rankColor = app.apk.malware.rank.toRankColor(),
         screenshots = app.content.screenshots,
         flipperChild = SUCCESS_CHILD,

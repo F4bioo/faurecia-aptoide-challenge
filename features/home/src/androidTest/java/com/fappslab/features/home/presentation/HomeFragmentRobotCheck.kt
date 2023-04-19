@@ -25,10 +25,6 @@ internal class HomeFragmentRobotCheck : RobotCheck<HomeFragmentRobotCheck> {
         checkViewHasExactlyBackgroundColor(R.id.toolbar_home, DS.color.ds_primary)
     }
 
-    fun checkAboutIconMenuIsClicked() {
-        checkButtonClicked(R.id.about)
-    }
-
     fun checkSuccessScreenIsDisplayed() {
         checkIsDisplayed(R.id.refresh_layout)
     }
@@ -37,7 +33,7 @@ internal class HomeFragmentRobotCheck : RobotCheck<HomeFragmentRobotCheck> {
         checkTextViewHasExactlyStringRes(R.id.text_editors_title, R.string.home_editors_title)
     }
 
-    fun checkRecyclerEditorsViewIsPopulated() {
+    fun checkRecyclerViewEditorsIsPopulated() {
         recyclerViewIsPopulated(R.id.recycler_editors)
     }
 
@@ -45,7 +41,7 @@ internal class HomeFragmentRobotCheck : RobotCheck<HomeFragmentRobotCheck> {
         checkTextViewHasExactlyStringRes(R.id.text_tops_title, R.string.home_tops_title)
     }
 
-    fun checkRecyclerTopsViewIsPopulated() {
+    fun checkRecyclerViewTopsIsPopulated() {
         recyclerViewIsPopulated(R.id.recycler_tops)
     }
 
@@ -53,7 +49,7 @@ internal class HomeFragmentRobotCheck : RobotCheck<HomeFragmentRobotCheck> {
         checkTextViewHasExactlyStringRes(R.id.text_trending_title, R.string.home_trending_title)
     }
 
-    fun checkRecyclerTrendingViewIsPopulated() {
+    fun checkRecyclerViewTrendingIsPopulated() {
         recyclerViewIsPopulated(R.id.recycler_trending)
     }
 
