@@ -1,17 +1,15 @@
 package com.fappslab.libraries.design.extension
 
+import android.content.Context
+import android.content.res.Configuration
+import android.view.WindowInsetsController
 import android.widget.ImageView
 import androidx.annotation.ColorRes
 import androidx.core.content.ContextCompat
-import androidx.core.view.WindowCompat
 import androidx.fragment.app.FragmentActivity
 import coil.load
 import coil.request.CachePolicy
 import com.fappslab.aptoide.libraries.design.R
-
-fun FragmentActivity.setStatusBarTransparent() {
-    WindowCompat.setDecorFitsSystemWindows(window, false)
-}
 
 fun ImageView.loadImage(urlImage: String) {
     load(urlImage) {
@@ -24,4 +22,13 @@ fun ImageView.loadImage(urlImage: String) {
 
 fun ImageView.setTint(@ColorRes colorRes: Int) {
     setColorFilter(ContextCompat.getColor(context, colorRes))
+}
+
+fun Context.getColorRes(@ColorRes colorRes: Int): Int {
+    return ContextCompat.getColor(this, colorRes)
+}
+
+fun FragmentActivity.isDarkModeActivated(): Boolean {
+    return resources.configuration.uiMode and
+            Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
 }

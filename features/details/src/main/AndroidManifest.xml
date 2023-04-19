@@ -4,7 +4,7 @@
     <application>
         <activity
             android:name="com.fappslab.features.details.presentation.DetailsActivity"
-            android:theme="@style/Theme.Ds.FullScreen" />
+            android:theme="@style/Theme.Ds" />
         <receiver
             android:name="com.fappslab.features.details.presentation.receiver.DownloaderReceiver"
             android:exported="true">

@@ -14,8 +14,8 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="DsBottomSheet" parent="@style/Theme.Design.BottomSheetDialog">
-        <item name="android:windowIsFloating">true</item>
+    <style name="DsBottomSheet" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
         <item name="bottomSheetStyle">@style/BottomSheetTopRadius</item>
         <item name="android:windowSoftInputMode">adjustResize</item>
     </style>

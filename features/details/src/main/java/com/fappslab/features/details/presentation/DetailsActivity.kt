@@ -23,6 +23,7 @@ import com.fappslab.libraries.arch.viewmodel.onViewAction
 import com.fappslab.libraries.arch.viewmodel.onViewState
 import com.fappslab.libraries.design.extension.loadImage
 import com.fappslab.libraries.design.extension.setTint
+import com.fappslab.libraries.design.extension.setTransparentStatusBar
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
@@ -39,6 +40,7 @@ internal class DetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setTransparentStatusBar()
         setupObservables()
         setupListeners()
         setupRecycler()
