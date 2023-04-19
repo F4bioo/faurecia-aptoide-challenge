@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
 import com.fappslab.aptoide.databinding.ActivityMainBinding
 import com.fappslab.libraries.arch.viewbinding.viewBinding
+import com.fappslab.libraries.design.extension.setStatusBarColor
 import com.fappslab.libraries.navigation.HomeNavigation
 import org.koin.android.ext.android.inject
 
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setStatusBarColor()
 
         supportFragmentManager.commit {
             replace(binding.containerApp.id, homeNavigation.create(), HOME_TAG)

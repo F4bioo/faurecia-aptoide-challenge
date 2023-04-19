@@ -85,16 +85,6 @@
         <item name="cornerRadius">8dp</item>
     </style>
 
-    <style name="DsBottomSheet" parent="@style/Theme.Design.Light.BottomSheetDialog">
-        <item name="android:windowIsFloating">true</item>
-        <item name="bottomSheetStyle">@style/BottomSheetTopRadius</item>
-        <item name="android:windowSoftInputMode">adjustResize</item>
-    </style>
-
-    <style name="BottomSheetTopRadius" parent="@style/Widget.Design.BottomSheet.Modal">
-        <item name="android:background">@drawable/ds_bg_bottom_sheet_top_radius</item>
-    </style>
-
     <style name="DsImageCircle">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
@@ -103,6 +93,16 @@
     <style name="DsImageRounded">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">8%</item>
+    </style>
+
+    <style name="DsBottomSheet" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheetTopRadius</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="BottomSheetTopRadius" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/ds_bg_bottom_sheet_top_radius</item>
     </style>
 
 </resources>

@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toStartOf="@id/image_avatar"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image_avatar"
         app:layout_constraintVertical_bias="0"
         app:tint="@color/ds_gray_light" />
 
@@ -27,13 +27,14 @@
         android:id="@+id/image_avatar"
         android:layout_width="@dimen/ds_size_20"
         android:layout_height="@dimen/ds_size_20"
+        android:layout_marginTop="@dimen/ds_size_06"
+        android:elevation="1dp"
         android:importantForAccessibility="no"
         android:padding="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearance="@style/DsImageRounded"
-        android:elevation="1dp"
         tools:src="@tools:sample/avatars" />
 
     <ImageView
