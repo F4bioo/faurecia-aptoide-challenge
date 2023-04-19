@@ -1,0 +1,27 @@
+name: Android CI
+
+on:
+  push:
+    branches:
+      - develop
+      - master
+  pull_request:
+    branches:
+      - develop
+      - master
+
+jobs:
+  detekt:
+    needs: []
+    steps:
+      - uses: ./.github/quality-checks/detekt.yml
+
+  lint:
+    needs: [detekt]
+    steps:
+      - uses: ./.github/quality-checks/android-lint.yml
+
+  tests:
+    needs: [lint]
+    steps:
+      - uses: ./.github/quality-checks/tests.yml
