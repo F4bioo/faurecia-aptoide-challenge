@@ -52,7 +52,7 @@ This file can be installed on an Android device for testing purposes by clicking
 
 * [SharedFlow for View actions](https://developer.android.com/kotlin/flow/stateflow-and-sharedflow#sharedflow)
 
-* [ListAdapter - Generic adapter](https://medium.com/@costa.fbo/reduce-boilerplate-code-with-a-single-listadapter-for-multiple-recyclerviews-c7d657917c66)
+* [ListAdapter](https://developer.android.com/reference/androidx/recyclerview/widget/ListAdapter)
 
 * [DiffUtil](https://developer.android.com/reference/androidx/recyclerview/widget/DiffUtil)
 
@@ -62,7 +62,7 @@ This file can be installed on an Android device for testing purposes by clicking
 
 * [Retrofit](https://github.com/square/retrofit)
 
-* [Coil](https://github.com/coil-kt/coil)
+* [Coil image loader](https://github.com/coil-kt/coil)
 
 * [DownloadManager](https://developer.android.com/reference/android/app/DownloadManager)
 
@@ -85,6 +85,10 @@ This file can be installed on an Android device for testing purposes by clicking
 
 <img src="images/CI.png" width="100%"/>
 
+## Task management
+
+<img src="images/boarding.png" width="100%"/>
+
 ## Module dependencies
 
 * [Modularization](https://developer.android.com/topic/modularization)
@@ -94,7 +98,6 @@ This file can be installed on an Android device for testing purposes by clicking
 ## Screens
 <img src="images/theme_light_mode.png" width="100%"/>
 <img src="images/theme_dark_mode.png" width="100%"/>
-
 
 ## Credits
 
