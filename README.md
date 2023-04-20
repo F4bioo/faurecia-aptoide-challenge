@@ -85,6 +85,10 @@ This file can be installed on an Android device for testing purposes by clicking
 
 <img src="images/CI.png" width="100%"/>
 
+## Task management
+
+<img src="images/boarding.png" width="100%"/>
+
 ## Module dependencies
 
 * [Modularization](https://developer.android.com/topic/modularization)
