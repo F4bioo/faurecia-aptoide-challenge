@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_about">Sobre</string>
+    <string name="home_logo_description">Logo Aptoide</string>
+    <string name="home_editors_title">Escolha dos editores</string>
+    <string name="home_tops_title">Mais Baixados</string>
+    <string name="home_trending_title">Em alta</string>
+</resources>

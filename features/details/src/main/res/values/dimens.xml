@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="details_avatar_width">150dp</dimen>
+    <dimen name="details_avatar_height">190dp</dimen>
+    <dimen name="details_avatar_stroke_size">1dp</dimen>
+    <dimen name="details_shimmer_micro_line_size">22dp</dimen>
+    <dimen name="details_shimmer_small_line_size">26dp</dimen>
+    <dimen name="details_shimmer_large_line_size">53dp</dimen>
+</resources>

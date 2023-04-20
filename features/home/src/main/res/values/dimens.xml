@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="home_logo_width">150dp</dimen>
+    <dimen name="home_editors_avatar_width">260dp</dimen>
+    <dimen name="home_editors_avatar_height">130dp</dimen>
+    <dimen name="home_trending_avatar_size">110dp</dimen>
+</resources>

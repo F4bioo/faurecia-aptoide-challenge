@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.imageview.ShapeableImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/image_avatar"
+    android:layout_width="@dimen/details_avatar_width"
+    android:layout_height="@dimen/details_avatar_height"
+    android:layout_marginEnd="@dimen/ds_size_04"
+    android:padding="1dp"
+    android:scaleType="centerCrop"
+    app:shapeAppearance="@style/DsImageRounded"
+    android:elevation="1dp"
+    tools:src="@tools:sample/avatars" />

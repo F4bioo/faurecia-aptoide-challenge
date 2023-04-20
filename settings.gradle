@@ -13,4 +13,10 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Aptoide"
-include ':app'
+// Keep it in alphabetical order
+include ':app',
+        ':features:details',
+        ':features:home',
+        ':libraries:arch',
+        ':libraries:design',
+        ':libraries:navigation'

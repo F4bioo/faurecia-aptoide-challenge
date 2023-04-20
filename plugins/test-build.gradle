@@ -1,0 +1,38 @@
+dependencies {
+    // TestLibs
+    implementation(TestLibs.kotlinTest)
+    implementation(TestLibs.kotlinJUnitTest)
+    implementation(TestLibs.turbineTest)
+    implementation(TestLibs.espressoCoreTest)
+    implementation(TestLibs.espressoContribTest)
+    implementation(TestLibs.fragmentTest)
+    implementation(TestLibs.koinCoreTest)
+    implementation(TestLibs.kotlinCoroutinesTest )
+    implementation(TestLibs.arcCoreTest)
+
+    testImplementation(TestLibs.junitTest)
+    testImplementation(TestLibs.koinTest)
+    testImplementation(TestLibs.koinCoreTest)
+    testImplementation(TestLibs.mockWebserverTest)
+    testImplementation(TestLibs.mockkUnitTest)
+    testImplementation(TestLibs.kotlinCoroutinesTest )
+    testImplementation(TestLibs.turbineTest)
+    testImplementation(TestLibs.runnerTest)
+    testImplementation(TestLibs.kotlinTest)
+    testImplementation(TestLibs.kotlinJUnitTest)
+    testImplementation(TestLibs.arcCoreTest)
+
+    androidTestImplementation(TestLibs.extJunitTest)
+    androidTestImplementation(TestLibs.espressoCoreTest)
+    androidTestImplementation(TestLibs.espressoContribTest)
+    androidTestImplementation(TestLibs.koinTest)
+    androidTestImplementation(TestLibs.koinCoreTest)
+    androidTestImplementation(TestLibs.mockkAndroidTest)
+    androidTestImplementation(TestLibs.fragmentTest)
+    androidTestImplementation(TestLibs.arcCoreTest)
+    androidTestImplementation(TestLibs.extJunitKtxTest)
+    androidTestImplementation(TestLibs.okhttpTest)
+
+    // Modules
+    androidTestImplementation project(Modules.design)
+}

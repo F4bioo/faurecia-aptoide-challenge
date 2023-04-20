@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="Theme.Ds" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/ds_primary</item>
+        <item name="colorPrimaryVariant">@color/ds_primary_dark</item>
+        <item name="colorOnPrimary">@color/ds_on_primary</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/ds_secondary</item>
+        <item name="colorSecondaryVariant">@color/ds_secondary_variant</item>
+        <item name="colorOnSecondary">@color/ds_on_secondary</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.Ds.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Ds.FullScreen" parent="@style/Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="DsTextLarge" parent="TextAppearance.AppCompat.Large">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:selectable">true</item>
+    </style>
+
+    <style name="DsTextMedium" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:selectable">true</item>
+    </style>
+
+    <style name="DsTextSmall" parent="TextAppearance.AppCompat.Small">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:selectable">true</item>
+    </style>
+
+    <style name="DsTextMin" parent="android:TextAppearance">
+        <item name="android:textSize">@dimen/ds_text_size_01</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:selectable">true</item>
+    </style>
+
+    <style name="DsTextHighlightLarge" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:selectable">true</item>
+    </style>
+
+    <style name="DsTextHighlightMedium" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:selectable">true</item>
+    </style>
+
+    <style name="DsTextHighlightSmall" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:selectable">true</item>
+    </style>
+
+    <style name="DsPrimaryButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/ds_white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:height">55dp</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <style name="DsSecondaryButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/ds_on_secondary</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <style name="DsImageCircle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="DsImageRounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8%</item>
+    </style>
+
+    <style name="DsBottomSheet" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheetTopRadius</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="BottomSheetTopRadius" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/ds_bg_bottom_sheet_top_radius</item>
+    </style>
+
+</resources>

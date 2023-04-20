@@ -1,44 +1,70 @@
+import io.gitlab.arturbosch.detekt.Detekt
+
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 }
+apply from: "$rootDir/plugins/android-build.gradle"
+apply from: "$rootDir/plugins/test-build.gradle"
+apply from: "$rootDir/config/detekt/detekt-build.gradle"
 
 android {
-    namespace 'com.fappslab.aptoide'
-    compileSdk 33
-
+    namespace Config.applicationId
+    signingConfigs {
+        release {
+            // Implements keyStore for release version
+        }
+    }
     defaultConfig {
-        applicationId "com.fappslab.aptoide"
-        minSdk 28
-        targetSdk 33
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        applicationId Config.applicationId
     }
 
     buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        debug {
+            debuggable true
+            applicationIdSuffix '.debug'
         }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        preprod {
+            initWith debug
+            minifyEnabled true
+            applicationIdSuffix '.preprod'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                    "$rootDir/app/proguard-rules.pro",
+                    "$rootDir/app/proguard-rules-staging.pro"
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                    "$rootDir/app/proguard-rules.pro",
+                    "$rootDir/app/proguard-rules-staging.pro"
+        }
     }
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+        kotlinOptions {
+            freeCompilerArgs += "-opt-in=kotlin.RequiresOptIn"
+        }
+    }
+    tasks.withType(Detekt).configureEach { detekt -> // detekt
+        reports {
+            xml.required.set(false)
+            html.required.set(true)
+            txt.required.set(false)
+            sarif.required.set(false)
+            md.required.set(false)
+        }
+    }
 }
 
 dependencies {
-
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.6.0'
-    implementation 'com.google.android.material:material:1.8.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    // Modules
+    implementation project(Modules.home)
+    implementation project(Modules.details)
+    implementation project(Modules.design)
+    implementation project(Modules.arch)
+    implementation project(Modules.navigation)
 }

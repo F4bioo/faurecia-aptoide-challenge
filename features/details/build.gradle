@@ -1,0 +1,21 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+apply from: "$rootDir/plugins/android-build.gradle"
+
+android {
+    namespace "${Config.applicationId}.features.details"
+    resourcePrefix "details"
+}
+
+dependencies {
+    // Libs
+    implementation(Libs.shimmer)
+    implementation(Libs.lottie)
+
+    // Modules
+    implementation project(Modules.design)
+    implementation project(Modules.arch)
+    implementation project(Modules.navigation)
+}

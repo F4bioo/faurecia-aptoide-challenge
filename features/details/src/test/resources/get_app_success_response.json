@@ -1,0 +1,307 @@
+{
+  "info": {
+    "status": "OK",
+    "time": {
+      "seconds": 0.0161588191986084,
+      "human": "16 milliseconds"
+    }
+  },
+  "data": {
+    "id": 64807051,
+    "name": "Instagram",
+    "package": "com.instagram.android",
+    "uname": "instagram",
+    "size": 50616995,
+    "icon": "https://pool.img.aptoide.com/mark8/3c0b5296e29c391d50a7580b3e949a34_icon.png",
+    "graphic": "https://pool.img.aptoide.com/mark8/3aef259315e6bdcc3c538cccd2ccfc1d_fgraphic.jpg",
+    "added": "2013-01-29 22:52:59",
+    "modified": "2023-04-18 23:07:04",
+    "updated": "2023-04-18 23:07:06",
+    "main_package": null,
+    "age": {
+      "name": "all",
+      "title": "Everyone",
+      "pegi": "PEGI-3",
+      "rating": 0
+    },
+    "developer": {
+      "id": 2747,
+      "name": "Instagram",
+      "website": "http://help.instagram.com/",
+      "email": "android-support@instagram.com",
+      "privacy": "http://instagram.com/legal/privacy/"
+    },
+    "store": {
+      "id": 65518,
+      "name": "mark8",
+      "avatar": "https://pool.img.aptoide.com/mark8/3bf5adf05843f9f28c486d5ddef8f873_ravatar.jpg",
+      "appearance": {
+        "theme": "red",
+        "description": ""
+      },
+      "stats": {
+        "apps": 974,
+        "subscribers": 1175800,
+        "downloads": 719860368
+      }
+    },
+    "file": {
+      "vername": "280.0.0.0.89",
+      "vercode": 368005573,
+      "md5sum": "d59ea9ec9e68e564ba286504b08afb77",
+      "filesize": 50616995,
+      "added": "2023-04-18 23:07:04",
+      "path": "https://pool.apk.aptoide.com/mark8/com-instagram-android-368005573-64807051-d59ea9ec9e68e564ba286504b08afb77.apk",
+      "path_alt": "https://pool.apk.aptoide.com/mark8/alt/Y29tLWluc3RhZ3JhbS1hbmRyb2lkLTM2ODAwNTU3My02NDgwNzA1MS1kNTllYTllYzllNjhlNTY0YmEyODY1MDRiMDhhZmI3Nw.apk",
+      "signature": {
+        "sha1": "C5:6F:B7:D5:91:BA:67:04:DF:04:7F:D9:8F:53:53:72:FE:A0:02:11",
+        "owner": "CN=Kevin Systrom, O=Instagram Inc, L=San Francisco, ST=California, C=US"
+      },
+      "hardware": {
+        "sdk": 28,
+        "screen": "SMALL",
+        "gles": 2,
+        "cpus": [
+          "arm64-v8a"
+        ],
+        "densities": [
+          [
+            200,
+            560
+          ],
+          [
+            300,
+            560
+          ],
+          [
+            400,
+            560
+          ],
+          [
+            500,
+            560
+          ],
+          [
+            200,
+            640
+          ],
+          [
+            300,
+            640
+          ],
+          [
+            400,
+            640
+          ],
+          [
+            500,
+            640
+          ]
+        ],
+        "dependencies": []
+      },
+      "malware": {
+        "rank": "TRUSTED",
+        "reason": {
+          "signature_validated": {
+            "date": "2023-04-18",
+            "status": "unknown",
+            "signature_from": "market"
+          }
+        },
+        "added": "2023-04-18 23:07:06",
+        "modified": "2023-04-18 23:07:06"
+      },
+      "flags": {
+        "votes": [
+          {
+            "type": "FAKE",
+            "count": 0
+          },
+          {
+            "type": "FREEZE",
+            "count": 0
+          },
+          {
+            "type": "GOOD",
+            "count": 0
+          },
+          {
+            "type": "LICENSE",
+            "count": 0
+          },
+          {
+            "type": "VIRUS",
+            "count": 0
+          }
+        ]
+      },
+      "used_features": [
+        "android.hardware.faketouch"
+      ],
+      "used_permissions": [
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_MEDIA_LOCATION",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.BLUETOOTH",
+        "android.permission.CAMERA",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.GET_ACCOUNTS",
+        "android.permission.INTERNET",
+        "android.permission.MANAGE_OWN_CALLS",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.READ_CONTACTS",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.READ_MEDIA_VIDEO",
+        "android.permission.READ_PHONE_NUMBERS",
+        "android.permission.READ_PHONE_STATE",
+        "android.permission.READ_PROFILE",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.REORDER_TASKS",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_CREDENTIALS",
+        "android.permission.USE_FINGERPRINT",
+        "android.permission.USE_FULL_SCREEN_INTENT",
+        "android.permission.VIBRATE",
+        "android.permission.WAKE_LOCK",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "com.amazon.device.messaging.permission.RECEIVE",
+        "com.android.launcher.permission.INSTALL_SHORTCUT",
+        "com.android.launcher.permission.UNINSTALL_SHORTCUT",
+        "com.android.vending.BILLING",
+        "com.facebook.katana.provider.ACCESS",
+        "com.facebook.services.identity.FEO2",
+        "com.google.android.c2dm.permission.RECEIVE",
+        "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+        "com.google.android.gms.permission.AD_ID",
+        "com.htc.launcher.permission.READ_SETTINGS",
+        "com.htc.launcher.permission.UPDATE_SHORTCUT",
+        "com.huawei.android.launcher.permission.CHANGE_BADGE",
+        "com.instagram.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+        "com.instagram.direct.permission.DIRECT_APP_THREAD_STORE_SERVICE",
+        "com.instagram.direct.permission.PROTECTED_DEEPLINKING",
+        "com.sonyericsson.home.permission.BROADCAST_BADGE",
+        "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE",
+        ".permission.RECEIVE_ADM_MESSAGE"
+      ],
+      "tags": [
+        "input.pointer"
+      ]
+    },
+    "media": {
+      "keywords": [
+        "instagram",
+        "android",
+        "social"
+      ],
+      "description": "Instagram (from Meta) allows you to create and share your photos, stories, reels and videos with the friends and followers you care about. Connect with friends, share what you're up to, or see what's new from others all over the world. Explore our community where you can feel free to be yourself and share everything from your daily moments to life's highlights.\n\nINSTA reels bring you a new way to create and discover entertaining short videos. You can watch, like, comment, and share reels videos in a dedicated space in the Reels tab.\n\n*Watch & create short clips up to 30 seconds long with INSTA Reels.\nAdd special effects, background music, face filters, emojis, and stickers to bring your reels and stories to life\nUpload your creative video clips and reels to expand your audience \nEnjoy millions of entertaining, funny, and informative videos and reels\nWatch & share any Instagram Reels video with your friends\n\n*Add photos and videos to your INSTA Story that disappear after 24 hours, and bring them to life with fun creative tools.\nStories allow you to easily share moments or posts from your day with text, music, stickers, and GIFs to bring your Stories to life\nShare memes privately with your friends and have conversations\nBoomerangs loop any moment you capture for a fun mini-video while Superzoom lets you add special effects as the camera automatically zooms in\nAdd polls to your Stories to get more interaction with friends and followers\nChoose specific Close Friends who can watch your video clips or make them public\nPin your favorite memories to your profile to keep your Stories alive as Highlights\n\n* Message your friends in Direct\nStart fun conversations with one or more friends about what you see on Feed, Stories, and INSTA Reels.\nVideo chat to connect no matter where you are\nLearn about what's trending from your favorite accounts and share them to friends\nSend messages to your friends, share posts privately, and receive chat notifications\n\n* Post photos, reels and videos to your INSTA Feed\nUpload photos and videos directly from your phone library\nShare content with your followers instantly\nPost photos and videos to your feed that you want to show on your profile\nPost short videos, reels or photo updates from moments in your life\nReceive notifications when someone likes or comments on your post\n\n*Search & Explore to Learn More About Your Interests\n* Follow your favorite bands, celebrities, actors, athletes, and singers for live updates\n* Watch skits, movie scenes, news updates, music performances, sports highlights, and more from your favorite pages\n* Check out IGTV for longer videos from your favorite INSTA creators.\n* Discover brands and connect with local small businesses\n* Shop for products that compliment your personal style.",
+      "summary": "Create & share photos, stories, & reels with friends you love",
+      "news": "We have new features and improvements! Update to the latest version to get them.\n•\tComment Moderation: We are committed to keeping Instagram a safe and positive place for self expression. New comments tool in the Options menu that lets you filter out comments on your posts containing words you consider offensive or inappropriate.\n•\tInstagram Stories:\n◦\tNow you can add color to your text. Swipe the colors above the keyboard to see more, or tap and hold a circle to select a custom color.",
+      "videos": [
+        {
+          "type": "YOUTUBE",
+          "url": "https://www.youtube.com/embed/uwZZEWrGgtY",
+          "thumbnail": "https://i1.ytimg.com/vi/uwZZEWrGgtY/hqdefault.jpg"
+        }
+      ],
+      "screenshots": [
+        {
+          "url": "https://pool.img.aptoide.com/mark8/540970040056ffbe17f33984893f569d_screen.png",
+          "height": 728,
+          "width": 368
+        },
+        {
+          "url": "https://pool.img.aptoide.com/mark8/42b093acf0bcfe92be8fae6d3a6dfc96_screen.png",
+          "height": 728,
+          "width": 368
+        },
+        {
+          "url": "https://pool.img.aptoide.com/mark8/60cde3bd003661fe4d9646f789874d37_screen.png",
+          "height": 728,
+          "width": 368
+        },
+        {
+          "url": "https://pool.img.aptoide.com/mark8/6fc4d9290d59fe83eb51febbd794301d_screen.png",
+          "height": 728,
+          "width": 368
+        },
+        {
+          "url": "https://pool.img.aptoide.com/mark8/6ad1034c49290feee9e62a5b13dc33f2_screen.png",
+          "height": 728,
+          "width": 368
+        }
+      ]
+    },
+    "urls": {
+      "w": "https://instagram.en.aptoide.com/?store_name=mark8&app_id=64807051",
+      "m": "https://instagram.en.aptoide.com/?store_name=mark8&app_id=64807051"
+    },
+    "stats": {
+      "rating": {
+        "avg": 4.25,
+        "total": 6715,
+        "votes": [
+          {
+            "value": 5,
+            "count": 4749
+          },
+          {
+            "value": 4,
+            "count": 422
+          },
+          {
+            "value": 3,
+            "count": 705
+          },
+          {
+            "value": 2,
+            "count": 155
+          },
+          {
+            "value": 1,
+            "count": 684
+          }
+        ]
+      },
+      "prating": {
+        "avg": 4.14,
+        "total": 15991,
+        "votes": [
+          {
+            "value": 5,
+            "count": 10339
+          },
+          {
+            "value": 4,
+            "count": 1853
+          },
+          {
+            "value": 3,
+            "count": 1494
+          },
+          {
+            "value": 2,
+            "count": 327
+          },
+          {
+            "value": 1,
+            "count": 1978
+          }
+        ]
+      },
+      "downloads": 25289609,
+      "pdownloads": 114848832
+    },
+    "aab": null,
+    "obb": null,
+    "pay": null,
+    "appcoins": {
+      "advertising": false,
+      "billing": false,
+      "flags": []
+    }
+  }
+}
