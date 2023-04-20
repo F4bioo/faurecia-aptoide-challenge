@@ -82,13 +82,14 @@ This file can be installed on an Android device for testing purposes by clicking
 * [JaCoCo](https://en.wikipedia.org/wiki/Java_code_coverage_tools)
 
 * [GitHub Actions](https://github.com/features/actions)
-  <img src="images/CI.png" width="100%"/>
+
+<img src="images/CI.png" width="100%"/>
 
 ## Module dependencies
 
 * [Modularization](https://developer.android.com/topic/modularization)
 
-<img src="images/graphviz.svg"/>
+<img src="images/graphviz.png"/>
 
 ## Screens
 <img src="images/theme_light_mode.png" width="100%"/>
