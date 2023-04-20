@@ -1,0 +1,35 @@
+digraph {
+edge ["dir"="forward"]
+graph ["dpi"="100","label"="Aptoide","labelloc"="t","fontsize"="35"]
+node ["style"="filled"]
+
+# app module
+":app" ["shape"="rectangle","fillcolor"="#EAAC5F"]
+
+# feature modules
+":features:details" ["fillcolor"="#09D6EF"]
+":features:home" ["fillcolor"="#09D6EF"]
+
+# libraries module
+":libraries:arch" ["fillcolor"="#FFEB3B"]
+":libraries:design" ["fillcolor"="#FFEB3B"]
+":libraries:navigation" ["fillcolor"="#FFEB3B"]
+
+{
+edge ["dir"="none"]
+graph ["rank"="same"]
+":app"
+}
+":app" -> ":features:home" ["style"="dotted"]
+":app" -> ":features:details" ["style"="dotted"]
+":app" -> ":libraries:design" ["style"="dotted"]
+":app" -> ":libraries:arch" ["style"="dotted"]
+":app" -> ":libraries:navigation" ["style"="dotted"]
+":features:home" -> ":libraries:design" ["style"="dotted"]
+":features:home" -> ":libraries:arch" ["style"="dotted"]
+":features:home" -> ":libraries:navigation" ["style"="dotted"]
+":libraries:design" -> ":libraries:arch" ["style"="dotted"]
+":features:details" -> ":libraries:design" ["style"="dotted"]
+":features:details" -> ":libraries:arch" ["style"="dotted"]
+":features:details" -> ":libraries:navigation" ["style"="dotted"]
+}
