@@ -5,11 +5,6 @@ plugins {
 repositories {
     google()
     mavenCentral()
-
-    maven {
-        url = uri("https://jcenter.bintray.com/")
-        content {
-            includeGroup("org.jetbrains.kotlin")
-        }
-    }
 }
+
+val kotlinVersion: String by project.extra { "1.7.21" }
