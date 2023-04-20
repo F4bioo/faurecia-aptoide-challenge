@@ -31,6 +31,11 @@ The use of the following libraries is encouraged:
 - Material Design
 - MVVM or MVP
 
+## APK File
+
+This file can be installed on an Android device for testing purposes by clicking [here](app-debug.apk).
+
+
 ## This project involves the use of:
 
 * [Koin dependency injection](https://insert-koin.io/)
