@@ -35,4 +35,5 @@ object Versions {
     const val coreTest_version = "2.1.0"
     const val mockWebserver_version = "4.9.0"
     const val okhttpTest_version = "4.9.0"
+    const val coreKtxTest_version = "1.5.0"
 }

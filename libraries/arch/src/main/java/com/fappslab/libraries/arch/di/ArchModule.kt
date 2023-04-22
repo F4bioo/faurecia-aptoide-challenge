@@ -8,7 +8,6 @@ import com.fappslab.libraries.arch.network.client.HttpClient
 import com.fappslab.libraries.arch.network.client.HttpClientImpl
 import com.fappslab.libraries.arch.network.downloader.Downloader
 import com.fappslab.libraries.arch.network.downloader.DownloaderImpl
-import com.fappslab.libraries.arch.network.interceptor.DefInterceptor
 import com.fappslab.libraries.arch.network.interceptor.HeaderInterceptor
 import com.fappslab.libraries.arch.network.retrofit.RetrofitClient
 import okhttp3.Interceptor
@@ -40,7 +39,6 @@ object ArchModule : KoinLoad() {
         return RetrofitClient(
             baseUrl = BuildConfig.BASE_URL,
             interceptors = listOf(
-                DefInterceptor(),
                 HeaderInterceptor(),
                 httpLoggingInterceptor()
             )

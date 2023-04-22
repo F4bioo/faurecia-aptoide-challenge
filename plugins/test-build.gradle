@@ -32,6 +32,7 @@ dependencies {
     androidTestImplementation(TestLibs.arcCoreTest)
     androidTestImplementation(TestLibs.extJunitKtxTest)
     androidTestImplementation(TestLibs.okhttpTest)
+    androidTestImplementation(TestLibs.coreKtxTest)
 
     // Modules
     androidTestImplementation project(Modules.design)

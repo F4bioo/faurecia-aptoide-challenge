@@ -1,8 +1,8 @@
 package com.fappslab.features.details.navigation
 
 import android.content.Context
-import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider
+import androidx.test.core.app.launchActivity
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.fappslab.features.details.presentation.DetailsActivity
 import com.fappslab.features.details.presentation.viewmodel.DetailsViewModel
@@ -39,12 +39,13 @@ internal class DetailsNavigationImplTest {
     fun whenInvokeCreate_shouldOpenDetailsActivity() {
         // Given
         val context = ApplicationProvider.getApplicationContext<Context>()
-        val subject = DetailsNavigationImpl()
         val expectedActivityName = "DetailsActivity"
+        val subject = DetailsNavigationImpl()
 
         // When
-        val intent = subject.create(context, packageName = "com.instagram.android")
-        val scenario = ActivityScenario.launch<DetailsActivity>(intent)
+        val scenario = launchActivity<DetailsActivity>(
+            subject.create(context, packageName = "com.instagram.android")
+        )
 
         // Then
         scenario.onActivity { activity ->
