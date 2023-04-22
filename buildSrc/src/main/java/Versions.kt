@@ -23,6 +23,9 @@ object Versions {
     const val timber_version = "4.7.1"
     const val shimmer_version = "0.5.0"
     const val coil_version = "2.3.0"
+    const val flipper_version = "0.189.0"
+    const val soloader_version = "0.10.4"
+    const val leakcanaryAndroid_version = "2.8.1"
 
     // Tests Libs versions
     const val junit_version = "4.13.2"

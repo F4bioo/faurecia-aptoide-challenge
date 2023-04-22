@@ -61,6 +61,14 @@ android {
 }
 
 dependencies {
+    // Libs
+    debugImplementation(Libs.soLoader)
+    debugImplementation(Libs.flipper)
+    debugImplementation(Libs.flipperNetwork)
+    debugImplementation(Libs.leakcanary2)
+    debugImplementation(Libs.leakcanaryAndroid)
+    implementation(Libs.okhttpLoggingInterceptor)
+
     // Modules
     implementation project(Modules.home)
     implementation project(Modules.details)
