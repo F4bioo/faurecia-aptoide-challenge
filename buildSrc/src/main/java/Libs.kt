@@ -41,6 +41,12 @@ object Libs {
     const val rxjava = "io.reactivex.rxjava2:rxjava:${Versions.rxjava_version}"
     const val rxandroid = "io.reactivex.rxjava2:rxandroid:${Versions.rxAndroid_version}"
 
+    const val flipper = "com.facebook.flipper:flipper:${Versions.flipper_version}"
+    const val soLoader = "com.facebook.soloader:soloader:${Versions.soloader_version}"
+    const val flipperNetwork = "com.facebook.flipper:flipper-network-plugin:${Versions.flipper_version}"
+    const val leakcanary2 = "com.facebook.flipper:flipper-leakcanary2-plugin:${Versions.flipper_version}"
+    const val leakcanaryAndroid = "com.squareup.leakcanary:leakcanary-android:${Versions.leakcanaryAndroid_version}"
+
     // Others
     const val gson = "com.google.code.gson:gson:${Versions.gson_version}"
     const val timber = "com.jakewharton.timber:timber:${Versions.timber_version}"

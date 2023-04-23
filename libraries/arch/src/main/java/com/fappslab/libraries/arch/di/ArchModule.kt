@@ -4,25 +4,29 @@ import android.app.DownloadManager
 import android.content.Context
 import com.fappslab.aptoide.libraries.arch.BuildConfig
 import com.fappslab.libraries.arch.koinload.KoinLoad
+import com.fappslab.libraries.arch.koinload.KoinQualifier
 import com.fappslab.libraries.arch.network.client.HttpClient
 import com.fappslab.libraries.arch.network.client.HttpClientImpl
 import com.fappslab.libraries.arch.network.downloader.Downloader
 import com.fappslab.libraries.arch.network.downloader.DownloaderImpl
-import com.fappslab.libraries.arch.network.interceptor.HeaderInterceptor
 import com.fappslab.libraries.arch.network.retrofit.RetrofitClient
-import okhttp3.Interceptor
-import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.core.module.Module
 import org.koin.dsl.module
+import retrofit2.Retrofit
+
+object RetrofitInterceptorQualifier : KoinQualifier
 
 object ArchModule : KoinLoad() {
 
     override val dataModule: Module = module {
-        single<HttpClient> {
-            HttpClientImpl(
-                retrofit = getRetrofitClient().create()
-            )
+        single<Retrofit> {
+            RetrofitClient(
+                baseUrl = BuildConfig.BASE_URL,
+                interceptors = get(qualifier = RetrofitInterceptorQualifier)
+            ).create()
         }
+
+        single<HttpClient> { HttpClientImpl(retrofit = get()) }
     }
 
     override val additionalModule: Module = module {
@@ -34,21 +38,4 @@ object ArchModule : KoinLoad() {
             )
         }
     }
-
-    private fun getRetrofitClient(): RetrofitClient {
-        return RetrofitClient(
-            baseUrl = BuildConfig.BASE_URL,
-            interceptors = listOf(
-                HeaderInterceptor(),
-                httpLoggingInterceptor()
-            )
-        )
-    }
-
-    private fun httpLoggingInterceptor(): Interceptor =
-        HttpLoggingInterceptor().apply {
-            level = if (BuildConfig.DEBUG) {
-                HttpLoggingInterceptor.Level.BODY
-            } else HttpLoggingInterceptor.Level.NONE
-        }
 }

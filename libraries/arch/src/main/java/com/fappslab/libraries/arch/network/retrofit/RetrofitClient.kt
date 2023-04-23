@@ -16,18 +16,16 @@ internal class RetrofitClient(
     private val interceptors: List<Interceptor>
 ) {
 
-    fun create(): Retrofit =
-        Retrofit.Builder()
+    fun create(): Retrofit {
+        return Retrofit.Builder()
             .baseUrl(baseUrl)
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .client(provideOKHttpClient(interceptors))
+            .client(okhttpClient())
             .build()
+    }
 
-    private fun provideOKHttpClient(
-        interceptors: List<Interceptor>
-    ): OkHttpClient {
-
+    private fun okhttpClient(): OkHttpClient {
         val builder = OkHttpClient.Builder()
             .retryOnConnectionFailure(true)
             .readTimeout(READ_TIMEOUT, TimeUnit.SECONDS)
