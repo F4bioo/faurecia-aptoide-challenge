@@ -23,6 +23,7 @@ import com.fappslab.libraries.arch.viewbinding.viewBinding
 import com.fappslab.libraries.arch.viewmodel.onViewAction
 import com.fappslab.libraries.arch.viewmodel.onViewState
 import com.fappslab.libraries.design.extension.loadImage
+import com.fappslab.libraries.design.extension.setLightNavigationBarIcons
 import com.fappslab.libraries.design.extension.setTint
 import com.fappslab.libraries.design.extension.setTransparentStatusBar
 import org.koin.android.ext.android.inject
@@ -30,7 +31,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 import com.fappslab.aptoide.libraries.design.R as DS
 
-internal class DetailsActivity : AppCompatActivity() {
+internal class DetailsActivity : AppCompatActivity(R.layout.details_activity) {
 
     private val binding: DetailsActivityBinding by viewBinding()
     private val viewModel: DetailsViewModel by viewModel { parametersOf(args.packageName) }
@@ -40,8 +41,8 @@ internal class DetailsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(binding.root)
         setTransparentStatusBar()
+        setLightNavigationBarIcons()
         setupObservables()
         setupListeners()
         setupRecycler()

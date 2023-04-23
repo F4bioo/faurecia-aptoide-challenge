@@ -20,7 +20,6 @@ class FragmentViewBindingDelegate<Binding : ViewBinding>(
     override fun onDestroy(owner: LifecycleOwner) {
         binding = null
         owner.lifecycle.removeObserver(this)
-        super.onDestroy(owner)
     }
 
     @Suppress("UNCHECKED_CAST")

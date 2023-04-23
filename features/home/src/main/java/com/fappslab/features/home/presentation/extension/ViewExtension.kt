@@ -11,11 +11,10 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
 import com.airbnb.lottie.LottieAnimationView
 import com.fappslab.aptoide.features.home.R
-import com.fappslab.features.home.presentation.AboutFragment
-import com.fappslab.features.home.presentation.ErrorFragment
 import com.fappslab.features.home.presentation.HomeFragment
 import com.fappslab.libraries.design.dsmodal.build
 import com.fappslab.libraries.design.dsmodal.dsModalHost
+import com.fappslab.aptoide.libraries.design.R as DS
 
 private const val ERROR_TAG = "showErrorBottomSheet"
 private const val ABOUT_TAG = "showAboutBottomSheet"
@@ -24,25 +23,31 @@ internal fun RecyclerView.commonSetup() {
     itemAnimator = null
 }
 
-internal fun HomeFragment.showErrorBottomSheet(
-    shouldShow: Boolean,
-    message: String?,
-    dismissBlock: () -> Unit
-) {
+internal fun HomeFragment.showErrorBottomSheet(message: String?, actionPrimary: () -> Unit) {
     dsModalHost {
-        setFragment = { ErrorFragment.create(message) }
-        onDismiss = dismissBlock
-    }.build(shouldShow, childFragmentManager, ERROR_TAG)
+        imageRes = DS.drawable.ds_illu_moon
+        titleRes = DS.string.common_error_title
+        messageText = message ?: getString(DS.string.common_error_message)
+        primaryButton = {
+            buttonTextRes = DS.string.common_try_again
+            buttonAction = {
+                dismiss()
+                actionPrimary()
+            }
+        }
+    }.build(manager = childFragmentManager, tag = ERROR_TAG)
 }
 
-internal fun HomeFragment.showAboutBottomSheet(
-    shouldShow: Boolean,
-    dismissBlock: () -> Unit
-) {
+internal fun HomeFragment.showAboutBottomSheet() {
     dsModalHost {
-        setFragment = { AboutFragment.create() }
-        onDismiss = dismissBlock
-    }.build(shouldShow, childFragmentManager, ABOUT_TAG)
+        imageRes = DS.drawable.ds_illu_challenge
+        titleRes = R.string.home_about_title
+        messageRes = R.string.home_about_message
+        primaryButton = {
+            buttonTextRes = DS.string.common_got_it
+            buttonAction = { dismiss() }
+        }
+    }.build(manager = childFragmentManager, tag = ABOUT_TAG)
 }
 
 internal fun HomeFragment.onMenuItem(

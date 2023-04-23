@@ -50,19 +50,15 @@ internal class HomeFragment : Fragment(R.layout.home_fragment) {
 
         onViewAction(viewModel) { action ->
             when (action) {
+                HomeViewAction.About -> showAboutBottomSheet()
                 is HomeViewAction.Details -> navigateToDetailsAction(action)
-                is HomeViewAction.About -> showAboutBottomSheetAction(action)
                 is HomeViewAction.Error -> showErrorBottomSheetAction(action)
             }
         }
     }
 
     private fun showErrorBottomSheetAction(action: HomeViewAction.Error) {
-        showErrorBottomSheet(action.shouldShow, action.message, viewModel::onErrorDismiss)
-    }
-
-    private fun showAboutBottomSheetAction(action: HomeViewAction.About) {
-        showAboutBottomSheet(action.shouldShow, viewModel::onAboutDismiss)
+        showErrorBottomSheet(action.message, viewModel::onRefresh)
     }
 
     private fun emptyViewMessageState(message: String?) {

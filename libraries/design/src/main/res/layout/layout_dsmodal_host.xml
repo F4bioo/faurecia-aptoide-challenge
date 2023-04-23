@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/drag_line"
+        android:layout_width="100dp"
+        android:layout_height="@dimen/ds_size_01"
+        android:background="#7F868686"
+        app:layout_constraintBottom_toBottomOf="@id/button_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/button_close"
+        app:layout_constraintVertical_bias="0" />
 
     <ImageButton
         android:id="@+id/button_close"
@@ -17,15 +29,99 @@
         app:layout_constraintTop_toTopOf="parent"
         app:tint="@color/ds_gray_light" />
 
-    <FrameLayout
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/container_fragment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/ds_size_02"
-        android:paddingBottom="@dimen/ds_size_02"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/container_buttons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_close" />
+        app:layout_constraintTop_toBottomOf="@id/button_close">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_avatar"
+                android:layout_width="@dimen/ds_size_18"
+                android:layout_height="@dimen/ds_size_18"
+                android:importantForAccessibility="no"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/avatars"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/text_tile"
+                style="@style/DsTextHighlightLarge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ds_size_08"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/ds_size_02"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_avatar"
+                tools:text="@tools:sample/lorem"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/text_message"
+                style="@style/DsTextMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ds_size_04"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/ds_size_02"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_tile"
+                tools:maxLines="15"
+                tools:text="@tools:sample/lorem/random"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/container_buttons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/ds_size_02"
+        android:paddingTop="@dimen/ds_size_04"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_primary"
+            style="@style/DsPrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/ds_size_04"
+            android:visibility="gone"
+            tools:text="Primary button"
+            tools:visibility="visible" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_secondary"
+            style="@style/DsSecondaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/ds_size_04"
+            android:visibility="gone"
+            tools:text="Secondary button"
+            tools:visibility="visible" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
