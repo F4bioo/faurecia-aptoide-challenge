@@ -9,5 +9,5 @@
     android:padding="1dp"
     android:scaleType="centerCrop"
     app:shapeAppearance="@style/DsImageRounded"
-    android:elevation="1dp"
+    app:strokeWidth="1dp"
     tools:src="@tools:sample/avatars" />

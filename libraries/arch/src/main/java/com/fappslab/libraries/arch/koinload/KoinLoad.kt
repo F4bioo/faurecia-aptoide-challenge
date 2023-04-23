@@ -7,13 +7,13 @@ import org.koin.dsl.module
 abstract class KoinLoad {
 
     open val modules: List<Module>
-        get() = domainModule + dataModule + presentation + additionalModule
+        get() = domainModule + dataModule + presentationModule + additionalModule
 
     protected open val domainModule: Module = module { }
 
     protected open val dataModule: Module = module { }
 
-    protected open val presentation: Module = module { }
+    protected open val presentationModule: Module = module { }
 
     protected open val additionalModule: Module = module { }
 

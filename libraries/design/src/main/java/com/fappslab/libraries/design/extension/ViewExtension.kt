@@ -2,11 +2,9 @@ package com.fappslab.libraries.design.extension
 
 import android.content.Context
 import android.content.res.Configuration
-import android.view.WindowInsetsController
 import android.widget.ImageView
 import androidx.annotation.ColorRes
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.FragmentActivity
 import coil.load
 import coil.request.CachePolicy
 import com.fappslab.aptoide.libraries.design.R
@@ -28,7 +26,7 @@ fun Context.getColorRes(@ColorRes colorRes: Int): Int {
     return ContextCompat.getColor(this, colorRes)
 }
 
-fun FragmentActivity.isDarkModeActivated(): Boolean {
+fun Context.isDarkModeActivated(): Boolean {
     return resources.configuration.uiMode and
             Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
 }

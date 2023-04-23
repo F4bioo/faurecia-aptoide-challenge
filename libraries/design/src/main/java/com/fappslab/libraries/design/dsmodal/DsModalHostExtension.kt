@@ -10,7 +10,7 @@ fun LifecycleOwner.dsModalHost(
 ): DsModalHost = DsModalHost().apply(block)
 
 fun DsModalHost.build(
-    shouldShow: Boolean,
+    shouldShow: Boolean = true,
     manager: FragmentManager,
     tag: String
 ) {

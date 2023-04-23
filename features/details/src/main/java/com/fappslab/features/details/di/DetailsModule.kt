@@ -16,7 +16,7 @@ import org.koin.dsl.module
 
 object DetailsModule : KoinLoad() {
 
-    override val presentation: Module = module {
+    override val presentationModule: Module = module {
         viewModel { (packageName: String) ->
             val repository = getDetailsRepository()
             DetailsViewModel(

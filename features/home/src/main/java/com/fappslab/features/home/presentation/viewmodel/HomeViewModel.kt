@@ -35,7 +35,7 @@ internal class HomeViewModel(
     private fun getAppsFailure(cause: Throwable) {
         if (state.value.apps.isNullOrEmpty()) {
             onState { it.getAppsFailureState(cause) }
-        } else onAction { HomeViewAction.Error(shouldShow = true, message = cause.message) }
+        } else onAction { HomeViewAction.Error(message = cause.message) }
     }
 
     fun onClickItem(app: App) {
@@ -50,14 +50,6 @@ internal class HomeViewModel(
         getApps()
     }
 
-    fun onErrorDismiss() {
-        onAction { HomeViewAction.Error(shouldShow = false, message = null) }
-    }
-
-    fun onAboutDismiss() {
-        onAction { HomeViewAction.About(shouldShow = false) }
-    }
-
     fun onEmptyButtonClicked() {
         onState { it.copy(flipperChild = LOADING_CHILD) }
         getApps()
@@ -65,7 +57,7 @@ internal class HomeViewModel(
 
     fun onMenuClicked(@IdRes idRes: Int) {
         when (idRes) {
-            R.id.about -> onAction { HomeViewAction.About(shouldShow = true) }
+            R.id.about -> onAction { HomeViewAction.About }
         }
     }
 }

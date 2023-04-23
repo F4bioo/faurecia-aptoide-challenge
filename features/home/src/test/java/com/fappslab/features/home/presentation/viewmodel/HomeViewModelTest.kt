@@ -136,7 +136,7 @@ internal class HomeViewModelTest {
         val apps = appsStub()
         val message = "Some error"
         val expectedState = initialState.copy(apps = apps.list)
-        val expectedAction = HomeViewAction.Error(shouldShow = true, message = message)
+        val expectedAction = HomeViewAction.Error(message = message)
         setupSubject(with = ReturnsType.SUCCESS)
         every { getAppsUseCase() } returns Single.error(Throwable(message))
 
@@ -161,7 +161,7 @@ internal class HomeViewModelTest {
         val apps = appsStub()
         val message = "Some error"
         val expectedState = initialState.copy(apps = apps.list)
-        val expectedAction = HomeViewAction.Error(shouldShow = true, message = message)
+        val expectedAction = HomeViewAction.Error(message = message)
         setupSubject(with = ReturnsType.SUCCESS)
         every { getAppsUseCase() } returns Single.error(Throwable(message))
 
@@ -178,45 +178,6 @@ internal class HomeViewModelTest {
             }
         }
         verify(exactly = 2) { getAppsUseCase() }
-    }
-
-    @Test
-    fun `onErrorDismiss Should expose Error action When invoke error dismiss with populated list`() {
-        // Given
-        val expectedAction = HomeViewAction.Error(shouldShow = false, message = null)
-        setupSubject(with = ReturnsType.SUCCESS)
-
-        // When
-        subject.onErrorDismiss()
-
-        // Then
-        runTest {
-            subject.action.test {
-                assertEquals(expectedAction, awaitItem())
-            }
-        }
-        verify { getAppsUseCase() }
-    }
-
-    @Test
-    fun `onAboutDismiss Should expose About action When invoke about dismiss`() {
-        // Given
-        val expectedFirstAction = HomeViewAction.About(shouldShow = true)
-        val expectedFinalAction = HomeViewAction.About(shouldShow = false)
-        setupSubject()
-        subject.onMenuClicked(idRes = R.id.about)
-
-        // When
-        subject.onAboutDismiss()
-
-        // Then
-        runTest {
-            subject.action.test {
-                assertEquals(expectedFirstAction, awaitItem())
-                assertEquals(expectedFinalAction, awaitItem())
-            }
-        }
-        verify { getAppsUseCase() }
     }
 
     @Test
@@ -244,7 +205,7 @@ internal class HomeViewModelTest {
         val apps = appsStub()
         val message = "Some error"
         val expectedState = initialState.copy(apps = apps.list)
-        val expectedAction = HomeViewAction.Error(shouldShow = true, message = message)
+        val expectedAction = HomeViewAction.Error(message = message)
         setupSubject(with = ReturnsType.SUCCESS)
         every { getAppsUseCase() } returns Single.error(Throwable(message))
 
@@ -266,7 +227,7 @@ internal class HomeViewModelTest {
     @Test
     fun `onMenuClicked Should expose About action When invoke menu clicked`() {
         // Given
-        val expectedAction = HomeViewAction.About(shouldShow = true)
+        val expectedAction = HomeViewAction.About
         setupSubject()
 
         // When
