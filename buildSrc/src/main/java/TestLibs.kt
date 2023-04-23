@@ -18,6 +18,7 @@ object TestLibs {
     const val extJunitTest = "androidx.test.ext:junit:${Versions.androidxJunit_version}"
     const val extJunitKtxTest = "androidx.test.ext:junit-ktx:${Versions.androidxJunit_version}"
     const val fragmentTest = "androidx.fragment:fragment-testing:${Versions.fragment_version}"
+    const val coreKtxTest = "androidx.test:core-ktx:${Versions.coreKtxTest_version}"
 
     // Kotlin
     const val kotlinTest = "org.jetbrains.kotlin:kotlin-test:${Versions.kotlin_version}"
